@@ -1,0 +1,39 @@
+<div class="container-fluid" id="filterForm">
+    <form action="#" id="facultyFilter">
+        <!-- Search Field -->
+        <fieldset for="facultyFilter">
+    
+            <div class="col-12 form-group form-inline search-button" id="keystroke_field">
+                <div class="ml-auto col-auto">
+                    <label for="keystroke_filter" class="col-form-label" id="keywordLabel">Faculty Search</label>
+                    <input type="text" placeholder="Faculty Search" class="form-control" name="facultyScan" id="keystroke_filter" value="" />
+                </div>
+            </div>
+    
+    
+            <div class="col-12 form-group form-check">
+                <div class="form-row visually-hidden" id="radioLegend">
+                    <legend for="SelectBox-ByType">Faculty Categories</legend>
+                </div>
+    
+                <div class="col-12 form-row form-check-inline d-flex flex-column flex-sm-row flex-sm-nowrap justify-content-sm-evenly mx-0 my-1 px-1 py-2">
+                
+                    <input type="radio" class="form-check-input" name="SelectBox-ByType" id="Career" value="Career" />
+                    <label for="Career" class="form-check-label text-center text-sm-start">Career</label><span class="facultyFilterForm"> | </span>
+    
+                    <input type="radio" class="form-check-input" name="SelectBox-ByType" id="Emeriti" value="Emeriti" />
+                    <label for="Emeriti" class="form-check-label text-center text-sm-start">Emeriti</label><span class="facultyFilterForm"> | </span>
+    
+                    <input type="radio" class="form-check-input" name="SelectBox-ByType" id="Visiting/Affiliated" value="Visiting/Affiliated" />
+                    <label for="Visiting/Affiliated" class="form-check-label text-center text-sm-start">Visiting/Affiliated</label><span class="facultyFilterForm"> | </span>
+    
+                    <input type="radio" class="form-check-input" name="SelectBox-ByType" id="Adjunct" value="Adjunct" />
+                    <label for="Adjunct" class="form-check-label text-center text-sm-start">Adjunct</label><span class="facultyFilterForm"> | </span>
+
+                    <input type="radio" class="form-check-input" name="SelectBox-ByType" id="All" value="All" />
+                    <label for="All" class="form-check-label text-center text-sm-start">All</label>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
