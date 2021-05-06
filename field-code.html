@@ -1,39 +1,103 @@
-<div class="container-fluid" id="filterForm">
-    <form action="#" id="externshipFilter">
-        <!-- Search Field -->
-        <fieldset for="externshipFilter">
-    
-            <div class="col-12 form-group form-inline search-button" id="keystroke_field">
-                <div class="ml-auto col-auto">
-                    <label for="keystroke_filter" class="col-form-label" id="keywordLabel">Faculty Search</label>
-                    <input type="text" placeholder="Externship Search" class="form-control" name="externshipScan" id="keystroke_filter" value="" />
-                </div>
-            </div>
-    
-    
-            <div class="col-12 form-group form-check">
-                <div class="form-row visually-hidden" id="radioLegend">
-                    <legend for="SelectBox-ByType">Types</legend>
-                </div>
-    
-                <div class="col-12 form-row form-check-inline d-flex flex-column flex-sm-row flex-sm-nowrap justify-content-sm-evenly mx-0 my-1 px-1 py-2">
-                
-                    <input type="radio" class="form-check-input" name="SelectBox-ByType" id="AdministrativeLawJudges" value="Administrative Law Judges" />
-                    <label for="AdministrativeLawJudges" class="form-check-label text-center text-sm-start">Administrative Law Judges</label><span class="externshipFilterForm"> | </span>
-    
-                    <!-- <input type="radio" class="form-check-input" name="SelectBox-ByType" id="Emeriti" value="Emeriti" />
-                    <label for="Emeriti" class="form-check-label text-center text-sm-start">Emeriti</label><span class="facultyFilterForm"> | </span>
-    
-                    <input type="radio" class="form-check-input" name="SelectBox-ByType" id="Visiting/Affiliated" value="Visiting/Affiliated" />
-                    <label for="Visiting/Affiliated" class="form-check-label text-center text-sm-start">Visiting/Affiliated</label><span class="facultyFilterForm"> | </span>
-    
-                    <input type="radio" class="form-check-input" name="SelectBox-ByType" id="Adjunct" value="Adjunct" />
-                    <label for="Adjunct" class="form-check-label text-center text-sm-start">Adjunct</label><span class="facultyFilterForm"> | </span>
+<form action="#">
+    <!-- Search Field -->
+    <fieldset class="d-flex flex-md-row flex-wrap">
 
-                    <input type="radio" class="form-check-input" name="SelectBox-ByType" id="All" value="All" />
-                    <label for="All" class="form-check-label text-center text-sm-start">All</label> -->
-                </div>
+        <!-- Keyword Search Input -->
+        <div class="col-xs-12 col-md-4 input input-wrap text-input">
+            <label for="id_search">Search</label>
+            <input type="text" class="form-control" name="searchthispage" value="" id="id_search" placeholder="Search by Keyword" autofocus aria-label="Search Keyword" />
+        </div>
+
+        <!-- Search By Destination -->
+        <div class="col-xs-12 col-md-4 input input-wrap">
+            <label for="SelectBox-ByDestination">Destination</label>
+            <div class="select-input">
+                <select name="SelectBox-ByDestination" id="SelectBox-ByDestination">
+                    <option value="" selected>Select a Destination...</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Austria">Austria</option>
+                    <option value="Belgium">Belgium</option>
+                    <option value="Vietnam">Vietnam</option>
+                    <option value="Other Foreign Country">Other Foreign Country</option>
+                </select>
             </div>
-        </fieldset>
-    </form>
-</div>
+        </div>
+
+        <!-- Search By Term -->
+        <div class="col-xs-12 col-md-4 input input-wrap">
+            <label for="SelectBox-ByTerm">Term</label>
+            <div class="select-input">
+                <select name="SelectBox-ByTerm" id="SelectBox-ByTerm">
+                    <option value="" selected>Select a Term...</option>
+                    <option value="Academic Year">Academic Year</option>
+                    <option value="Fall Quarter">Fall Quarter</option>
+                    <option value="Fall Semester">Fall Semester</option>
+                    <option value="Fall-Winter Quarters">Fall-Winter Quarters</option>
+                    <option value="Winter Break">Winter Break</option>
+                    <option value="Winter Quarter">Winter Quarter</option>
+                    <option value="Winter-Spring Quarters">Winter-Spring Quarters</option>
+                    <option value="Spring Break">Spring Break</option>
+                    <option value="Spring Quarter">Spring Quarter</option>
+                    <option value="Spring Semester">Spring Semester</option>
+                    <option value="Summer">Summer</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Search By Fees -->
+        <div class="col-xs-12 col-md-4 input input-wrap">
+            <label for="SelectBox-ByProgramFee">SU Program Fee</label>
+            <div class="select-input">
+                <select name="SelectBox-ByProgramFee" id="SelectBox-ByProgramFee">
+                    <option value="" selected>Select a Fee...</option>
+                    <option value="0">0</option>
+                    <option value="2000">2,000</option>
+                    <option value="4000">4,000</option>
+                    <option value="6000">6,000</option>
+                    <option value="8000">8,000</option>
+                    <option value="10000">10,000</option>
+                    <option value="12000">12,000</option>
+                    <option value="Varies">Varies</option>
+                    <option value="N/A">N/A</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Search By Feature -->
+        <div class="col-xs-12 col-md-4 input input-wrap">
+            <label for="SelectBox-ByFeature">Features</label>
+            <div class="select-input">
+                <select name="SelectBox-ByFeature" id="SelectBox-ByFeature">
+                    <option value="" selected>Select a Feature...</option>
+                    <option value="Courses With Locals">Courses With Locals</option>
+                    <option value="Courses With Study Abroad Students">Courses With Study Abroad Students</option>
+                    <option value="Host University Program">Host University Program</option>
+                    <option value="Hybrid Program">Hybrid Program</option>
+                    <option value="Internship Opportunities">Internship Opportunities</option>
+                    <option value="Language Intensive Program">Language Intensive Program</option>
+                    <option value="No Foreign Language Pre-Requisites">No Foreign Language Pre-Requisites</option>
+                    <option value="Research Opportunities">Research Opportunities</option>
+                    <option value="Study Center Program">Study Center Program</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Search By Field of Study -->
+        <div class="col-xs-12 col-md-4 input input-wrap">
+            <label for="SelectBox-ByFieldOfStudy">Field of Study</label>
+            <div class="select-input">
+                <select name="SelectBox-ByFieldOfStudy" id="SelectBox-ByFieldOfStudy">
+                    <option value="" selected>Select Field of Study...</option>
+                    <option value="Accounting">Accounting</option>
+                    <option value="Arabic">Arabic</option>
+                    <option value="Art History">Art History</option>
+                    <option value="Asian Studies">Asian Studies</option>
+                    <option value="Biochemistry">Biochemistry</option>
+                </select>
+            </div>
+        </div>
+
+
+    </fieldset>
+</form>
