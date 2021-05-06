@@ -1,0 +1,124 @@
+#pageTitle{
+    padding: 0 0 30px 0;
+  }
+  
+  input[type="radio"].form-check-input {
+      display: none;
+  }
+  
+  #facultyFilter .form-check {
+      padding-left: 0;
+  }
+  
+  .form-check-label {
+      font-weight: 500;
+  }
+  
+  .form-check-label:hover {
+      cursor: pointer;
+      text-decoration: underline;
+  }
+  
+  #facultyFilter .form-check-label {
+      color: #333333;
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.45rem;
+      font-weight: 500;
+      text-transform: uppercase;
+  }
+  
+  span.facultyFilterForm {
+      color: #333333;
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.45rem;
+      font-weight: 500;
+  }
+  
+  form#facultyFilter {
+      padding-top: 3vh;
+  }
+  
+  form#facultyFilter .form-check-inline {
+      margin: 1rem;
+  }
+  
+  div#radioLegend {
+      display: none;
+  }
+  
+  #keywordLabel {
+      display: none;
+  }
+  
+  div#keystroke_field {
+      padding: 0;
+  }
+  
+  input#keystroke_filter {
+      width: 100%;
+  }
+  
+  .noResultsToShow {
+      background: #e3e3da;
+      padding: 30px;
+      margin: 15px;
+  }
+  
+  /**  filter-search hidden classes  **/
+  .hideByText, .hideByType, .hideResultsMessage {
+      display: none;
+  }
+  
+  
+  
+  
+  
+  
+  
+  /*********
+  *
+  *   Responsive Media Queries
+  *
+  *
+  **/
+  
+  
+  
+  
+  /* Large devices (desktops, 992px and up) */
+  @media screen and (min-width: 992px) {
+  
+      #facultyFilter .form-check-label {
+          font-size: 2rem;
+          font-weight: 400;
+      }
+      
+      span.facultyFilterForm {
+          font-size: 2rem;
+          font-weight: 400;
+      }
+  }
+  
+  
+  /* ***** Mobile Up ***** */
+  @media screen and (min-width: 576px) and (max-width: 767.99px) {
+  
+      #facultyFilter .form-check-label {
+          font-size: 1rem;
+      }
+      
+      span.facultyFilterForm {
+          font-size: 1rem;
+      }
+  
+  }
+  
+  
+  /* Extra small devices (portrait phones, less than 576px) */
+  @media only screen and (max-width: 575.98px) {
+  
+      span.facultyFilterForm {
+          display: none;
+      }
+  }
+  
