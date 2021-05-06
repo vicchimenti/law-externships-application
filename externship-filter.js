@@ -1,13 +1,15 @@
 <script>
 /***
 *   @author Victor Chimenti, MSCS-SE '20
-*   @file article-filter.js
+*   @file externship-filter.js
 *
 *   jQuery
-*   This script searches the Gadget Finder Article content items for matches to the
-*   user selected search parameters in the filter field dropdown menu
+*   This script searches the Externship Database content items for matches to the
+*   user selected search parameters in the filter field dropdown menus
 *
-*   @version 3.3
+*   This custom system replaces the depreciated jQuery Quicksearch
+*
+*   @version 4.0
 */
 
 
