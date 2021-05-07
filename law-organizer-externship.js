@@ -1,7 +1,7 @@
 /***
  *      @author Victor Chimenti, MSCS-SE '20
  *      @file law-organizer-externship.js
- *      @see Seattle University School of Law Newsroom
+ *      @see Seattle University School of Law Externship Database
  *      law/organizer/externship
  *
  *      This content layout will be sorted by the organizer and will link to the
