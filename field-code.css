@@ -17,7 +17,7 @@
 }
 
 /* *** hide items that are not in the users filter *** */
-.hideByText, .hideByName, .hideByType, .hideBySeminar, .hideByLocation, .hideByCountry, .hideResultsMessage {
+.hideByText, .hideByAgency, .hideByType, .hideBySubject, .hideByJurisdiction, .hideByRegion, .hideResultsMessage {
     display: none;
 }
 
