@@ -21,7 +21,7 @@
      *  Assign local variables from the content type's fields
      * 
      * */
-    var name = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Name' output='normal' modifiers='striptags,htmlentities' />");
+    var externshipName = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Name' output='normal' modifiers='striptags,htmlentities' />");
     var externshipId = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Externship ID' output='normal' modifiers='striptags,htmlentities' />");
     var agency = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Agency' output='normal' modifiers='striptags,htmlentities' />");
     var subject = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Subject' output='normal' modifiers='striptags,htmlentities' />");
@@ -57,8 +57,9 @@
     var announcements = "Announcements";
     var suLawInTheNews = "SU Law in the News";
     var dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + '</p>';
-    var beginningHTML = '<div class="newsroomCategoryFeedItem newsroomBlurb col-12 col-xs-12 card border-0" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="Main" data-position-selected="Main" />">';
-    var endingHTML = '<hr class="articleBorderBottom"></div>';
+    var hRule = '<hr class="externshipBorderBottom">';
+    var beginningHTML = '<div class="externshipWrapper contentItem col card border-0 flex-fill w-100" aria-label="' + externshipName + '" id="id' + contentId + '" data-position-default="Main" data-position-selected="Main" />">';
+    var endingHTML = '</div>';
 
 
 
