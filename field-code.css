@@ -6,6 +6,16 @@
     margin-left: unset;
 }
 
+/* *** square corners on keyword input *** */
+#filterField .form-control {
+    border-radius: 0;
+}
+
+/* *** square corners on dropdowns *** */
+#filterField .form-select {
+    border-radius: 0;
+}
+
 /* *** hide items that are not in the users filter *** */
 .hideByText, .hideByName, .hideByType, .hideBySeminar, .hideByLocation, .hideByCountry, .hideResultsMessage {
     display: none;
