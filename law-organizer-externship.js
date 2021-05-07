@@ -43,20 +43,8 @@
      *  Declare/Assign local variables with base formatting
      * 
      * */
-    var listOfTags = "<div class='newsroomArticle tags hidden'>No Tags Entered</div>";
     var titleLink = "";
-    var listItems = "";
-    var photoCredit = "";
-    var authorByLine = "";
-    var thumbNailString = "";
-    var externalLinkString = "";
-    var internalLinkString = "";
-    var publishedLink = "";
-    var hyphen = " - ";
-    var events = "Events";
-    var announcements = "Announcements";
-    var suLawInTheNews = "SU Law in the News";
-    var dateline = '<p class="newsroomArticlePublishedDate">' + publishedDate + '</p>';
+
     var hRule = '<hr class="externshipBorderBottom">';
     var beginningHTML = '<div class="externshipWrapper contentItem col card border-0 flex-fill w-100" aria-label="' + externshipName + '" id="id' + contentId + '" data-position-default="Main" data-position-selected="Main" />">';
     var endingHTML = '</div>';
@@ -106,7 +94,7 @@
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorTag));
 
-    
+
 
     document.write(endingHTML);
 
