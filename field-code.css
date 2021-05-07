@@ -1,7 +1,17 @@
+/* *** align dropdown menus with organizer content *** */
+#filterField .container-fluid {
+    padding-right: unset;
+    padding-left: unset;
+    margin-right: unset;
+    margin-left: unset;
+}
+
+/* *** hide items that are not in the users filter *** */
 .hideByText, .hideByName, .hideByType, .hideBySeminar, .hideByLocation, .hideByCountry, .hideResultsMessage {
     display: none;
 }
 
+/* *** style the no results message box *** */
 .noResultsToShow {
     background: #e3e3da;
     padding: 30px;
