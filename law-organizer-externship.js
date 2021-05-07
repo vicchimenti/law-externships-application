@@ -66,10 +66,10 @@
 
 
     /***
-     *  display byline only when provided 
+     *  confirm location and subject fields
      * 
      * */
-    if (author == "") {
+    if (subject != "" && location != "") {
         authorByLine = '<p class="byLine hidden">No Author Provided</p>';
     } else {
         authorByLine = '<p class="byLine">By ' + author + '</p>';
