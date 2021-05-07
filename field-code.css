@@ -1,4 +1,4 @@
-.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByFeature, .hideByFieldOfStudy, .hideResultsMessage {
+.hideByText, .hideByName, .hideByType, .hideBySeminar, .hideByState, .hideByCountry, .hideResultsMessage {
     display: none;
 }
 
