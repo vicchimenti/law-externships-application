@@ -9,7 +9,7 @@
 *
 *   This custom system replaces the depreciated jQuery Quicksearch
 *
-*   @version 4.0
+*   @version 4.1
 */
 
 
@@ -37,14 +37,14 @@ $(function () {
             $(function () {
                 let parseItemsToDisplay = function() {
                     // assign array of currently visible content items
-                    visibleItems = $('.newsItemWrapper').not('.hideByDropdownCategories');
+                    visibleItems = $('.externshipWrapper').not('.visually-hidden');
                     // check to see if array is empty
                     if (visibleItems.length == 0) {
                         // when array is empty show the results message
-                        $('.noResultsToShow').removeClass('hideResultsMessage');
+                        $('.noResultsToShow').removeClass('visually-hidden');
                     } else {
                         // when array has content items suppress the results message
-                        $('.noResultsToShow').addClass('hideResultsMessage');
+                        $('.noResultsToShow').addClass('visually-hidden');
                     }
                 };
                 parseItems.process = parseItemsToDisplay;
@@ -61,9 +61,9 @@ $(function () {
                     let keyword = $(this).val().toLowerCase();
                     // filter the items for the input key
                     $(function () {
-                        $('.newsItem').filter(function () {
+                        $('.externshipWrapper').filter(function () {
                             // when the search key is not present in the item then hide the item
-                            $(this).toggleClass('hideByDropdownCategories', !($(this).text().toLowerCase().indexOf(keyword) > -1));
+                            $(this).toggleClass('visually-hidden', !($(this).text().toLowerCase().indexOf(keyword) > -1));
                         });
                     });
                     // parse out unselected content items and limit display to user selected items
