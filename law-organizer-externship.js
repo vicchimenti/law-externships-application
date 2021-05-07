@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 6.5
+ *      @version 6.7
  */
 
 
@@ -47,8 +47,6 @@
     var openCardBody = '<div class="card-body">';
     var closeCardBody = '</div>';
     var summary = '<p class="card-text visually-hidden">No Subject or Location Provided</p>';
-
-    // var hRule = '<hr class="externshipBorderBottom">';
     var beginningHTML = '<div class="externshipWrapper contentItem col card border-0 w-100" aria-label="' + externshipName + '" id="id' + contentId + '" data-position-default="Main" data-position-selected="Main">';
     var endingHTML = '</div>';
 
