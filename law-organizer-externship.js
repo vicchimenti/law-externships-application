@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 6.3
+ *      @version 6.4
  */
 
 
@@ -48,7 +48,7 @@
     var closeCardBody = '</div>';
     var summary = '<p class="card-text visually-hidden">No Subject or Location Provided</p>';
 
-    var hRule = '<hr class="externshipBorderBottom">';
+    // var hRule = '<hr class="externshipBorderBottom">';
     var beginningHTML = '<div class="externshipWrapper contentItem col card border-0 flex-fill w-100" aria-label="' + externshipName + '" id="id' + contentId + '" data-position-default="Main" data-position-selected="Main" />">';
     var endingHTML = '</div>';
 
@@ -70,9 +70,11 @@
      * 
      * */
     if (subject != "" && location != "") {
-        authorByLine = '<p class="byLine hidden">No Author Provided</p>';
-    } else {
-        authorByLine = '<p class="byLine">By ' + author + '</p>';
+        summary = '<p class="card-text">' + subject + ' (' + location + ')</p>';
+    } else if (subject == "" && location != "") {
+        summary = '<p class="card-text">(' + location + ')</p>';
+    } else if (subject != "" && location == "") {
+        summary = '<p class="card-text">' + subject + '</p>';
     }
 
 
