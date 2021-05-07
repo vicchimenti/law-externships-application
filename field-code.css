@@ -1,4 +1,4 @@
-.hideByText, .hideByName, .hideByType, .hideBySeminar, .hideByState, .hideByCountry, .hideResultsMessage {
+.hideByText, .hideByName, .hideByType, .hideBySeminar, .hideByLocation, .hideByCountry, .hideResultsMessage {
     display: none;
 }
 
