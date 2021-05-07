@@ -43,7 +43,7 @@
      *  Declare/Assign local variables with base formatting
      * 
      * */
-    var titleLink = "";
+    var titleLink = '<h3 class="card-title visually-hidden">No Title Provided</h3>';
 
     var hRule = '<hr class="externshipBorderBottom">';
     var beginningHTML = '<div class="externshipWrapper contentItem col card border-0 flex-fill w-100" aria-label="' + externshipName + '" id="id' + contentId + '" data-position-default="Main" data-position-selected="Main" />">';
@@ -91,8 +91,10 @@
      *  Write the document once
      * 
      * */
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorTag));
+    document.write(beginningHTML);
+    document.write(anchorTag);
+    document.write(titleLink);
+
 
 
 
