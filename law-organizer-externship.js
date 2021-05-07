@@ -55,7 +55,6 @@
 
 
 
-
     /***
      *  validate agency field and set fulltext link
      * 
@@ -65,6 +64,8 @@
     }
 
 
+
+    
     /***
      *  confirm location and subject fields
      * 
