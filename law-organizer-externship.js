@@ -44,6 +44,9 @@
      * 
      * */
     var titleLink = '<h3 class="card-title visually-hidden">No Title Provided</h3>';
+    var openCardBody = '<div class="card-body">';
+    var closeCardBody = '</div>';
+    var summary = '<p class="card-text visually-hidden">No Subject or Location Provided</p>';
 
     var hRule = '<hr class="externshipBorderBottom">';
     var beginningHTML = '<div class="externshipWrapper contentItem col card border-0 flex-fill w-100" aria-label="' + externshipName + '" id="id' + contentId + '" data-position-default="Main" data-position-selected="Main" />">';
@@ -54,19 +57,11 @@
 
 
     /***
-     *  determine which link, if any, goes in the title
-     *  and determine if a unique headline was added
-     *  if no headline is added then use the title
+     *  validate agency field and set fulltext link
      * 
      * */
-    if (headline == "" && articleFullBody == "") {
-        titleLink = '<h3 class="newsroomArticleTitle card-title">' + articleTitle + '</h3>';
-    } else if (articleFullBody == "") {
-        titleLink = '<h3 class="newsroomArticleTitle card-title">' + headline + '</h3>';
-    } else if (headline == "") {
-        titleLink = '<h3 class="newsroomArticleTitle card-title"><a href="' + fullTextLink + '">' + articleTitle + '</a></h3>';
-    } else {
-        titleLink = '<h3 class="newsroomArticleTitle card-title"><a href="' + fullTextLink + '">' + headline + '</a></h3>';
+    if (agency != "") {
+        titleLink = '<h3 class="card-title"><a href="' + fullTextLink + '" class="card-link" title="View full ' + agency + ' profile">' + agency + '</a></h3>';
     }
 
 
@@ -83,10 +78,6 @@
 
 
 
-
-
-
-
     /***
      *  Write the document once
      * 
@@ -94,10 +85,9 @@
     document.write(beginningHTML);
     document.write(anchorTag);
     document.write(titleLink);
-
-
-
-
+    document.write(openCardBody);
+    document.write(summary);
+    document.write(closeCardBody);
     document.write(endingHTML);
 
 
