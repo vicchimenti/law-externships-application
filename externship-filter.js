@@ -74,10 +74,10 @@ $(function () {
 
 
 
-            //   ***   Category Filter   ***   //
+            //   ***   Agency Filter   ***   //
             $(function () {
                 // When the Dropdown Menu Selector Course Types Change - Execute change function
-                $('#selectboxCategories').change(function () {
+                $('#SelectBox-ByAgency').change(function () {
                     // Assign Search Key
                     let typeKey = $(this).val();
                     // If Search Key is Not Null then Compare to the Type List Items in Each Content Item
@@ -87,14 +87,14 @@ $(function () {
                             var typeValue = $(this).text();
                             // Check to see if the Key and Value are a Match
                             if (typeValue.match(typeKey)) {
-                                $(this).parents('.newsItemWrapper').removeClass('hideByDropdownCategories');
+                                $(this).parents('.externshipWrapper').removeClass('visually-hidden');
                             } else {
-                                $(this).parents('.newsItemWrapper').addClass('hideByDropdownCategories');
+                                $(this).parents('.externshipWrapper').addClass('visually-hidden');
                             }
                         });
                         // Else the Search Key is Null so Reset all Content Items to Visible
                     } else {
-                        $('.newsItemWrapper').removeClass('hideByDropdownCategories');
+                        $('.externshipWrapper').removeClass('visually-hidden');
                     }
                     // parse out unselected content items and limit display to user selected items
                     parseItems.process();
