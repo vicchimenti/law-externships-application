@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 6.7
+ *      @version 6.8
  */
 
 
@@ -61,7 +61,7 @@
      * 
      * */
     if (agency != "") {
-        titleLink = '<h3 class="card-title"><a href="' + fullTextLink + '" class="card-link" title="View full ' + agency + ' profile">' + agency + '</a></h3>';
+        titleLink = '<h3 class="card-title agency"><a href="' + fullTextLink + '" class="card-link" title="View full ' + agency + ' profile">' + agency + '</a></h3>';
     }
 
 
