@@ -1,90 +1,92 @@
 <form action="#">
     <!-- Search Field -->
     <fieldset>
-        <div class="row">
+        <div class="container">
+            <div class="row">
 
-            <!-- Keyword Search Input -->
-            <div class="col col-md-4 input-group">
-                <input type="text" class="form-control" aria-label="Search This Page" value="" id="id_search" placeholder="Search by Keyword" autofocus aria-label="Search Keyword" />
+                <!-- Keyword Search Input -->
+                <div class="col-md-4 input-group">
+                    <input type="text" class="form-control" aria-label="Search This Page" value="" id="id_search" placeholder="Search by Keyword" autofocus aria-label="Search Keyword" />
+                </div>
+    
+                <!-- Search By Organization -->
+                <div class="col-md-4 input-group">
+                    <select class="form-select" aria-label="Select By Agency" id="SelectBox-ByAgency">
+                        <option value="" selected>Select an Agency...</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Austria">Austria</option>
+                        <option value="Belgium">Belgium</option>
+                        <option value="Vietnam">Vietnam</option>
+                        <option value="Other Foreign Country">Other Foreign Country</option>
+                    </select>
+                </div>
+    
+                <!-- Search By Type -->
+                <div class="col-md-4 input-group">
+                    <select class="form-select" aria-label="Select By Type" id="SelectBox-ByType">
+                        <option value="" selected>Select a Type...</option>
+                        <option value="Academic Year">Academic Year</option>
+                        <option value="Fall Quarter">Fall Quarter</option>
+                        <option value="Fall Semester">Fall Semester</option>
+                        <option value="Fall-Winter Quarters">Fall-Winter Quarters</option>
+                        <option value="Winter Break">Winter Break</option>
+                        <option value="Winter Quarter">Winter Quarter</option>
+                        <option value="Winter-Spring Quarters">Winter-Spring Quarters</option>
+                        <option value="Spring Break">Spring Break</option>
+                        <option value="Spring Quarter">Spring Quarter</option>
+                        <option value="Spring Semester">Spring Semester</option>
+                        <option value="Summer">Summer</option>
+                    </select>
+                </div>
             </div>
-
-            <!-- Search By Organization -->
-            <div class="col col-md-4 input-group">
-                <select class="form-select" aria-label="Select By Agency" id="SelectBox-ByAgency">
-                    <option value="" selected>Select an Agency...</option>
-                    <option value="Argentina">Argentina</option>
-                    <option value="Australia">Australia</option>
-                    <option value="Austria">Austria</option>
-                    <option value="Belgium">Belgium</option>
-                    <option value="Vietnam">Vietnam</option>
-                    <option value="Other Foreign Country">Other Foreign Country</option>
-                </select>
-            </div>
-
-            <!-- Search By Type -->
-            <div class="col col-md-4 input-group">
-                <select class="form-select" aria-label="Select By Type" id="SelectBox-ByType">
-                    <option value="" selected>Select a Type...</option>
-                    <option value="Academic Year">Academic Year</option>
-                    <option value="Fall Quarter">Fall Quarter</option>
-                    <option value="Fall Semester">Fall Semester</option>
-                    <option value="Fall-Winter Quarters">Fall-Winter Quarters</option>
-                    <option value="Winter Break">Winter Break</option>
-                    <option value="Winter Quarter">Winter Quarter</option>
-                    <option value="Winter-Spring Quarters">Winter-Spring Quarters</option>
-                    <option value="Spring Break">Spring Break</option>
-                    <option value="Spring Quarter">Spring Quarter</option>
-                    <option value="Spring Semester">Spring Semester</option>
-                    <option value="Summer">Summer</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="row">
-            
-            <!-- Search By Subject -->
-            <div class="col col-md-4 input-group">
-                <select class="form-select" aria-label="Select By Subject" id="SelectBox-BySubject">
-                    <option value="" selected>Select a Subject...</option>
-                    <option value="0">0</option>
-                    <option value="2000">2,000</option>
-                    <option value="4000">4,000</option>
-                    <option value="6000">6,000</option>
-                    <option value="8000">8,000</option>
-                    <option value="10000">10,000</option>
-                    <option value="12000">12,000</option>
-                    <option value="Varies">Varies</option>
-                    <option value="N/A">N/A</option>
-                </select>
-            </div>
-
-            <!-- Search By Jurisdiction -->
-            <div class="col col-md-4 input-group">
-                <select class="form-select" aria-label="Select By Jurisdiction" id="SelectBox-ByJurisdiction">
-                    <option value="" selected>Select a Jurisdiction...</option>
-                    <option value="Accounting">Accounting</option>
-                    <option value="Arabic">Arabic</option>
-                    <option value="Art History">Art History</option>
-                    <option value="Asian Studies">Asian Studies</option>
-                    <option value="Biochemistry">Biochemistry</option>
-                </select>
-            </div>
-
-            <!-- Search By Location -->
-            <div class="col col-md-4 input-group">
-                <select class="form-select" aria-label="Select By Location" id="SelectBox-ByLocation">
-                    <option value="" selected>Select a Location...</option>
-                    <option value="Courses With Locals">Courses With Locals</option>
-                    <option value="Courses With Study Abroad Students">Courses With Study Abroad Students</option>
-                    <option value="Host University Program">Host University Program</option>
-                    <option value="Hybrid Program">Hybrid Program</option>
-                    <option value="Internship Opportunities">Internship Opportunities</option>
-                    <option value="Language Intensive Program">Language Intensive Program</option>
-                    <option value="No Foreign Language Pre-Requisites">No Foreign Language Pre-Requisites</option>
-                    <option value="Research Opportunities">Research Opportunities</option>
-                    <option value="Study Center Program">Study Center Program</option>
-                </select>
-            </div>
+    
+            <div class="row">
+                
+                <!-- Search By Subject -->
+                <div class="col-md-4 input-group">
+                    <select class="form-select" aria-label="Select By Subject" id="SelectBox-BySubject">
+                        <option value="" selected>Select a Subject...</option>
+                        <option value="0">0</option>
+                        <option value="2000">2,000</option>
+                        <option value="4000">4,000</option>
+                        <option value="6000">6,000</option>
+                        <option value="8000">8,000</option>
+                        <option value="10000">10,000</option>
+                        <option value="12000">12,000</option>
+                        <option value="Varies">Varies</option>
+                        <option value="N/A">N/A</option>
+                    </select>
+                </div>
+    
+                <!-- Search By Jurisdiction -->
+                <div class="col-md-4 input-group">
+                    <select class="form-select" aria-label="Select By Jurisdiction" id="SelectBox-ByJurisdiction">
+                        <option value="" selected>Select a Jurisdiction...</option>
+                        <option value="Accounting">Accounting</option>
+                        <option value="Arabic">Arabic</option>
+                        <option value="Art History">Art History</option>
+                        <option value="Asian Studies">Asian Studies</option>
+                        <option value="Biochemistry">Biochemistry</option>
+                    </select>
+                </div>
+    
+                <!-- Search By Location -->
+                <div class="col-md-4 input-group">
+                    <select class="form-select" aria-label="Select By Location" id="SelectBox-ByLocation">
+                        <option value="" selected>Select a Location...</option>
+                        <option value="Courses With Locals">Courses With Locals</option>
+                        <option value="Courses With Study Abroad Students">Courses With Study Abroad Students</option>
+                        <option value="Host University Program">Host University Program</option>
+                        <option value="Hybrid Program">Hybrid Program</option>
+                        <option value="Internship Opportunities">Internship Opportunities</option>
+                        <option value="Language Intensive Program">Language Intensive Program</option>
+                        <option value="No Foreign Language Pre-Requisites">No Foreign Language Pre-Requisites</option>
+                        <option value="Research Opportunities">Research Opportunities</option>
+                        <option value="Study Center Program">Study Center Program</option>
+                    </select>
+                </div>
+            </div>    
         </div>
     </fieldset>
 </form>
