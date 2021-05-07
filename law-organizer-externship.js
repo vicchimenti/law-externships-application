@@ -44,9 +44,12 @@
      * 
      * */
     var titleLink = '<h3 class="card-title visually-hidden">No Title Provided</h3>';
+    var summary = '<p class="card-text visually-hidden">No Subject or Location Provided</p>';
     var openCardBody = '<div class="card-body">';
     var closeCardBody = '</div>';
-    var summary = '<p class="card-text visually-hidden">No Subject or Location Provided</p>';
+    var openHiddenFields = '<div class="visually-hidden">';
+    var closeHiddenFields = '</div>';
+    var searchFields = '<span class="visually-hidden">No Search Fields Provided</span>';
     var beginningHTML = '<div class="externshipWrapper contentItem col card border-0 w-100" aria-label="' + externshipName + '" id="id' + contentId + '" data-position-default="Main" data-position-selected="Main">';
     var endingHTML = '</div>';
 
@@ -88,6 +91,9 @@
     document.write(titleLink);
     document.write(openCardBody);
     document.write(summary);
+    document.write(openHiddenFields);
+    document.write(searchFields);
+    document.write(closeHiddenFields);
     document.write(closeCardBody);
     document.write(endingHTML);
 
