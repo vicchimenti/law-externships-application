@@ -49,7 +49,7 @@
     var summary = '<p class="card-text visually-hidden">No Subject or Location Provided</p>';
 
     // var hRule = '<hr class="externshipBorderBottom">';
-    var beginningHTML = '<div class="externshipWrapper contentItem col card border-0 flex-fill w-100" aria-label="' + externshipName + '" id="id' + contentId + '" data-position-default="Main" data-position-selected="Main">';
+    var beginningHTML = '<div class="externshipWrapper contentItem col card border-0 w-100" aria-label="' + externshipName + '" id="id' + contentId + '" data-position-default="Main" data-position-selected="Main">';
     var endingHTML = '</div>';
 
 
