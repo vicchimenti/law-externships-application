@@ -123,8 +123,8 @@
     document.write(summary);
     document.write(openHiddenFields);
     document.write(searchFields);
-    document.write(hiddenDescription);
     document.write(closeHiddenFields);
+    document.write(hiddenDescription);
     document.write(closeCardBody);
     document.write(endingHTML);
 
