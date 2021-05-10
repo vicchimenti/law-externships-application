@@ -44,7 +44,7 @@
      * 
      * */
     var titleLink = '<h3 class="card-title visually-hidden">No Title Provided</h3>';
-    var summary = '<p class="card-text visually-hidden">No Subject or Location Provided</p>';
+    var summary = '<p class="card-text visually-hidden subject location">No Subject or Location Provided</p>';
     var openCardBody = '<div class="card-body">';
     var closeCardBody = '</div>';
     var openHiddenFields = '<div class="visually-hidden">';
@@ -74,9 +74,9 @@
     if (subject != "" && location != "") {
         summary = '<p class="card-text subject location">' + subject + ' (' + location + ')</p>';
     } else if (subject == "" && location != "") {
-        summary = '<p class="card-text location">(' + location + ')</p>';
+        summary = '<p class="card-text subject location">(' + location + ')</p>';
     } else if (subject != "" && location == "") {
-        summary = '<p class="card-text subject">' + subject + '</p>';
+        summary = '<p class="card-text subject location">' + subject + '</p>';
     } else {
         // When summary p is visually hidden compenstate for bottom margin in the card body
         openCardBody = '<div class="card-body mb-4">';
