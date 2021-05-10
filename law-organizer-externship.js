@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 6.12
+ *      @version 6.13
  */
 
 
@@ -90,14 +90,11 @@
      * 
      * */
     if (jurisdiction != "" && externshipType != "") {
-        searchFields = '<span class="visually-hidden jurisdiction externshipType">No Search Fields Provided</span>';
-    } else if (subject == "" && location != "") {
-        summary = '<p class="card-text subject location">(' + location + ')</p>';
-    } else if (subject != "" && location == "") {
-        summary = '<p class="card-text subject location">' + subject + '</p>';
-    } else {
-        // When summary p is visually hidden compenstate for bottom margin in the card body
-        openCardBody = '<div class="card-body mb-4">';
+        searchFields = '<span class="visually-hidden jurisdiction externshipType">' + jurisdiction + ' : ' + externshipType + '</span>';
+    } else if (jurisdiction == "" && externshipType != "") {
+        searchFields = '<span class="visually-hidden jurisdiction externshipType">' + externshipType + '</span>';
+    } else if (jurisdiction != "" && externshipType == "") {
+        searchFields = '<span class="visually-hidden jurisdiction externshipType">' + jurisdiction + '</span>';
     }
 
 
