@@ -9,7 +9,7 @@
 *
 *   This custom system replaces the depreciated jQuery Quicksearch
 *
-*   @version 4.3
+*   @version 4.4
 */
 
 
@@ -76,11 +76,11 @@ $(function () {
 
             //   ***   Agency Filter   ***   //
             $(function () {
-                // When the Dropdown Menu Selector Course Types Change - Execute change function
+                // When the Dropdown Menu Selector Agency Changes - Execute change function
                 $('#SelectBox-ByAgency').change(function () {
                     // Assign Search Key
                     let typeKey = $(this).val();
-                    // If Search Key is Not Null then Compare to the Type List Items in Each Content Item
+                    // If Search Key is Not Null then Compare to the Agency Items in Each Content Item
                     if (typeKey) {
                         // search tags in each item
                         $('.agency').filter(function (i, e) {
@@ -106,27 +106,20 @@ $(function () {
 
             //   ***   Subject Filter   ***   //
             $(function () {
-                // When the Dropdown Menu Selector Course Types Change - Execute change function
                 $('#SelectBox-BySubject').change(function () {
-                    // Assign Search Key
                     let typeKey = $(this).val();
-                    // If Search Key is Not Null then Compare to the Type List Items in Each Content Item
                     if (typeKey) {
-                        // search tags in each item
                         $('.subject').filter(function (i, e) {
                             var typeValue = $(this).text();
-                            // Check to see if the Key and Value are a Match
                             if (typeValue.match(typeKey)) {
-                                $(this).parents('.externshipWrapper').removeClass('hideByAgency');
+                                $(this).parents('.externshipWrapper').removeClass('hideBySubject');
                             } else {
-                                $(this).parents('.externshipWrapper').addClass('hideByAgency');
+                                $(this).parents('.externshipWrapper').addClass('hideBySubject');
                             }
                         });
-                        // Else the Search Key is Null so Reset all Content Items to Visible
                     } else {
-                        $('.externshipWrapper').removeClass('hideByAgency');
+                        $('.externshipWrapper').removeClass('hideBySubject');
                     }
-                    // parse out unselected content items and limit display to user selected items
                     parseItems.process();
                 });
             });
