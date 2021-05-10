@@ -127,12 +127,58 @@ $(function () {
 
 
 
-            //   ***   Location Filter   ***   //
+            //   ***   Location Filter   *** jurisdiction externshipType  //
             $(function () {
                 $('#SelectBox-ByRegion').change(function () {
                     let typeKey = $(this).val();
                     if (typeKey) {
                         $('.location').filter(function (i, e) {
+                            var typeValue = $(this).text();
+                            if (typeValue.match(typeKey)) {
+                                $(this).parents('.externshipWrapper').removeClass('hideByRegion');
+                            } else {
+                                $(this).parents('.externshipWrapper').addClass('hideByRegion');
+                            }
+                        });
+                    } else {
+                        $('.externshipWrapper').removeClass('hideByRegion');
+                    }
+                    parseItems.process();
+                });
+            });
+
+
+
+
+            //   ***   Location Filter   ***  externshipType  //
+            $(function () {
+                $('#SelectBox-ByRegion').change(function () {
+                    let typeKey = $(this).val();
+                    if (typeKey) {
+                        $('.jurisdiction').filter(function (i, e) {
+                            var typeValue = $(this).text();
+                            if (typeValue.match(typeKey)) {
+                                $(this).parents('.externshipWrapper').removeClass('hideByRegion');
+                            } else {
+                                $(this).parents('.externshipWrapper').addClass('hideByRegion');
+                            }
+                        });
+                    } else {
+                        $('.externshipWrapper').removeClass('hideByRegion');
+                    }
+                    parseItems.process();
+                });
+            });
+
+
+
+
+            //   ***   Location Filter   ***  //
+            $(function () {
+                $('#SelectBox-ByRegion').change(function () {
+                    let typeKey = $(this).val();
+                    if (typeKey) {
+                        $('.externshipType').filter(function (i, e) {
                             var typeValue = $(this).text();
                             if (typeValue.match(typeKey)) {
                                 $(this).parents('.externshipWrapper').removeClass('hideByRegion');
