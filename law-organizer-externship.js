@@ -49,7 +49,7 @@
     var closeCardBody = '</div>';
     var openHiddenFields = '<div class="visually-hidden">';
     var closeHiddenFields = '</div>';
-    var searchFields = '<span class="visually-hidden">No Search Fields Provided</span>';
+    var searchFields = '<span class="visually-hidden jurisdiction externshipType">No Search Fields Provided</span>';
     var beginningHTML = '<div class="externshipWrapper contentItem col card border-0 w-100" aria-label="' + externshipName + '" id="id' + contentId + '" data-position-default="Main" data-position-selected="Main">';
     var endingHTML = '</div>';
 
@@ -89,8 +89,8 @@
      *  confirm hidden search fields
      * 
      * */
-    if (region != "") {
-        summary = '<p class="card-text subject location">' + subject + ' (' + location + ')</p>';
+    if (jurisdiction != "" && externshipType != "") {
+        searchFields = '<span class="visually-hidden jurisdiction externshipType">No Search Fields Provided</span>';
     } else if (subject == "" && location != "") {
         summary = '<p class="card-text subject location">(' + location + ')</p>';
     } else if (subject != "" && location == "") {
