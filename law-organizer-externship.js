@@ -86,6 +86,24 @@
 
 
     /***
+     *  confirm hidden search fields
+     * 
+     * */
+    if (region != "") {
+        summary = '<p class="card-text subject location">' + subject + ' (' + location + ')</p>';
+    } else if (subject == "" && location != "") {
+        summary = '<p class="card-text subject location">(' + location + ')</p>';
+    } else if (subject != "" && location == "") {
+        summary = '<p class="card-text subject location">' + subject + '</p>';
+    } else {
+        // When summary p is visually hidden compenstate for bottom margin in the card body
+        openCardBody = '<div class="card-body mb-4">';
+    }
+
+
+
+
+    /***
      *  Write the document once
      * 
      * */
