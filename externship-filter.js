@@ -150,9 +150,9 @@ $(function () {
 
 
 
-            //   ***   Location Filter   ***  externshipType  //
+            //   ***   Jurisdiction Filter   ***  //
             $(function () {
-                $('#SelectBox-ByRegion').change(function () {
+                $('#SelectBox-ByJurisdiction').change(function () {
                     let typeKey = $(this).val();
                     if (typeKey) {
                         $('.jurisdiction').filter(function (i, e) {
@@ -173,9 +173,9 @@ $(function () {
 
 
 
-            //   ***   Location Filter   ***  //
+            //   ***   Type Filter   ***  //
             $(function () {
-                $('#SelectBox-ByRegion').change(function () {
+                $('#SelectBox-ByType').change(function () {
                     let typeKey = $(this).val();
                     if (typeKey) {
                         $('.externshipType').filter(function (i, e) {
@@ -193,7 +193,6 @@ $(function () {
                 });
             });
             
-
 
 
 
