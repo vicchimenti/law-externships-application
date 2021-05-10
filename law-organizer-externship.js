@@ -77,6 +77,9 @@
         summary = '<p class="card-text">(' + location + ')</p>';
     } else if (subject != "" && location == "") {
         summary = '<p class="card-text">' + subject + '</p>';
+    } else {
+        // When summary p is visually hidden compenstate for bottom margin in the card body
+        openCardBody = '<div class="card-body mb-3">';
     }
 
 
