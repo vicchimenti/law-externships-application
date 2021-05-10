@@ -107,7 +107,7 @@ $(function () {
             //   ***   Subject Filter   ***   //
             $(function () {
                 // When the Dropdown Menu Selector Course Types Change - Execute change function
-                $('#SelectBox-ByAgency').change(function () {
+                $('#SelectBox-BySubject').change(function () {
                     // Assign Search Key
                     let typeKey = $(this).val();
                     // If Search Key is Not Null then Compare to the Type List Items in Each Content Item
