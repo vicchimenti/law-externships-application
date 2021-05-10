@@ -9,7 +9,7 @@
 *
 *   This custom system replaces the depreciated jQuery Quicksearch
 *
-*   @version 4.4
+*   @version 4.5
 */
 
 
@@ -119,6 +119,29 @@ $(function () {
                         });
                     } else {
                         $('.externshipWrapper').removeClass('hideBySubject');
+                    }
+                    parseItems.process();
+                });
+            });
+
+
+
+
+            //   ***   Location Filter   ***   //
+            $(function () {
+                $('#SelectBox-ByRegion').change(function () {
+                    let typeKey = $(this).val();
+                    if (typeKey) {
+                        $('.location').filter(function (i, e) {
+                            var typeValue = $(this).text();
+                            if (typeValue.match(typeKey)) {
+                                $(this).parents('.externshipWrapper').removeClass('hideByRegion');
+                            } else {
+                                $(this).parents('.externshipWrapper').addClass('hideByRegion');
+                            }
+                        });
+                    } else {
+                        $('.externshipWrapper').removeClass('hideByRegion');
                     }
                     parseItems.process();
                 });
