@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 6.8
+ *      @version 6.10
  */
 
 
@@ -79,7 +79,7 @@
         summary = '<p class="card-text">' + subject + '</p>';
     } else {
         // When summary p is visually hidden compenstate for bottom margin in the card body
-        openCardBody = '<div class="card-body mb-3">';
+        openCardBody = '<div class="card-body mb-4">';
     }
 
 
