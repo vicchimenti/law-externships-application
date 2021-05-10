@@ -158,13 +158,13 @@ $(function () {
                         $('.jurisdiction').filter(function (i, e) {
                             var typeValue = $(this).text();
                             if (typeValue.match(typeKey)) {
-                                $(this).parents('.externshipWrapper').removeClass('hideByRegion');
+                                $(this).parents('.externshipWrapper').removeClass('hideByJurisdiction');
                             } else {
-                                $(this).parents('.externshipWrapper').addClass('hideByRegion');
+                                $(this).parents('.externshipWrapper').addClass('hideByJurisdiction');
                             }
                         });
                     } else {
-                        $('.externshipWrapper').removeClass('hideByRegion');
+                        $('.externshipWrapper').removeClass('hideByJurisdiction');
                     }
                     parseItems.process();
                 });
