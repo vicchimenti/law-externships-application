@@ -50,6 +50,7 @@
     var openHiddenFields = '<div class="visually-hidden">';
     var closeHiddenFields = '</div>';
     var searchFields = '<span class="visually-hidden jurisdiction externshipType">No Search Fields Provided</span>';
+    var hiddenDescription = '<div class="visually-hidden description">No Description Provided</div>';
     var beginningHTML = '<div class="externshipWrapper contentItem col card border-0 w-100" aria-label="' + externshipName + '" id="id' + contentId + '" data-position-default="Main" data-position-selected="Main">';
     var endingHTML = '</div>';
 
@@ -95,6 +96,17 @@
         searchFields = '<span class="visually-hidden jurisdiction externshipType">' + externshipType + '</span>';
     } else if (jurisdiction != "" && externshipType == "") {
         searchFields = '<span class="visually-hidden jurisdiction externshipType">' + jurisdiction + '</span>';
+    }
+
+
+
+
+    /***
+     *  confirm description
+     * 
+     * */
+    if (description != "") {
+        hiddenDescription = '<div class="visually-hidden description">' + description + '</div>';
     }
 
 
