@@ -9,7 +9,7 @@
 *
 *   This custom system replaces the depreciated jQuery Quicksearch
 *
-*   @version 4.2
+*   @version 4.3
 */
 
 
@@ -37,14 +37,14 @@ $(function () {
             $(function () {
                 let parseItemsToDisplay = function() {
                     // assign array of currently visible content items
-                    visibleItems = $('.externshipWrapper').not('.visually-hidden');
+                    visibleItems = $('.externshipWrapper').not('.hideByText, .hideByAgency, .hideByType, .hideBySubject, .hideByJurisdiction, .hideByRegion');
                     // check to see if array is empty
                     if (visibleItems.length == 0) {
                         // when array is empty show the results message
-                        $('.noResultsToShow').removeClass('visually-hidden');
+                        $('.noResultsToShow').removeClass('hideResultsMessage');
                     } else {
                         // when array has content items suppress the results message
-                        $('.noResultsToShow').addClass('visually-hidden');
+                        $('.noResultsToShow').addClass('hideResultsMessage');
                     }
                 };
                 parseItems.process = parseItemsToDisplay;
@@ -63,7 +63,7 @@ $(function () {
                     $(function () {
                         $('.externshipWrapper').filter(function () {
                             // when the search key is not present in the item then hide the item
-                            $(this).toggleClass('visually-hidden', !($(this).text().toLowerCase().indexOf(keyword) > -1));
+                            $(this).toggleClass('hideByText', !($(this).text().toLowerCase().indexOf(keyword) > -1));
                         });
                     });
                     // parse out unselected content items and limit display to user selected items
@@ -87,14 +87,14 @@ $(function () {
                             var typeValue = $(this).text();
                             // Check to see if the Key and Value are a Match
                             if (typeValue.match(typeKey)) {
-                                $(this).parents('.externshipWrapper').removeClass('visually-hidden');
+                                $(this).parents('.externshipWrapper').removeClass('hideByAgency');
                             } else {
-                                $(this).parents('.externshipWrapper').addClass('visually-hidden');
+                                $(this).parents('.externshipWrapper').addClass('hideByAgency');
                             }
                         });
                         // Else the Search Key is Null so Reset all Content Items to Visible
                     } else {
-                        $('.externshipWrapper').removeClass('visually-hidden');
+                        $('.externshipWrapper').removeClass('hideByAgency');
                     }
                     // parse out unselected content items and limit display to user selected items
                     parseItems.process();
