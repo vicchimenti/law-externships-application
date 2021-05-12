@@ -150,29 +150,6 @@ $(function () {
 
 
 
-            //   ***   Jurisdiction Filter   ***  //
-            $(function () {
-                $('#SelectBox-ByJurisdiction').change(function () {
-                    let typeKey = $(this).val();
-                    if (typeKey) {
-                        $('.jurisdiction').filter(function (i, e) {
-                            var typeValue = $(this).text();
-                            if (typeValue.match(typeKey)) {
-                                $(this).parents('.externshipWrapper').removeClass('hideByJurisdiction');
-                            } else {
-                                $(this).parents('.externshipWrapper').addClass('hideByJurisdiction');
-                            }
-                        });
-                    } else {
-                        $('.externshipWrapper').removeClass('hideByJurisdiction');
-                    }
-                    parseItems.process();
-                });
-            });
-
-
-
-
             //   ***   Type Filter   ***  //
             $(function () {
                 $('#SelectBox-ByType').change(function () {
