@@ -74,36 +74,6 @@ $(function () {
 
 
 
-            //   ***   Agency Filter   ***   //
-            $(function () {
-                // When the Dropdown Menu Selector Agency Changes - Execute change function
-                $('#SelectBox-ByAgency').change(function () {
-                    // Assign Search Key
-                    let typeKey = $(this).val();
-                    // If Search Key is Not Null then Compare to the Agency Items in Each Content Item
-                    if (typeKey) {
-                        // search tags in each item
-                        $('.agency').filter(function (i, e) {
-                            var typeValue = $(this).text();
-                            // Check to see if the Key and Value are a Match
-                            if (typeValue.match(typeKey)) {
-                                $(this).parents('.externshipWrapper').removeClass('hideByAgency');
-                            } else {
-                                $(this).parents('.externshipWrapper').addClass('hideByAgency');
-                            }
-                        });
-                        // Else the Search Key is Null so Reset all Content Items to Visible
-                    } else {
-                        $('.externshipWrapper').removeClass('hideByAgency');
-                    }
-                    // parse out unselected content items and limit display to user selected items
-                    parseItems.process();
-                });
-            });
-
-
-
-
             //   ***   Region Filter   ***  //
             $(function () {
                 $('#SelectBox-ByRegion').change(function () {
