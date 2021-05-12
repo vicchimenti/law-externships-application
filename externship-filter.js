@@ -127,12 +127,12 @@ $(function () {
 
 
 
-            //   ***   Location Filter   *** jurisdiction externshipType  //
+            //   ***   Region Filter   ***  //
             $(function () {
                 $('#SelectBox-ByRegion').change(function () {
                     let typeKey = $(this).val();
                     if (typeKey) {
-                        $('.location').filter(function (i, e) {
+                        $('.region').filter(function (i, e) {
                             var typeValue = $(this).text();
                             if (typeValue.match(typeKey)) {
                                 $(this).parents('.externshipWrapper').removeClass('hideByRegion');
