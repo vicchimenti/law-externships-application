@@ -9,7 +9,7 @@
 *
 *   This custom system replaces the depreciated jQuery Quicksearch
 *
-*   @version 4.7
+*   @version 4.8
 */
 
 
