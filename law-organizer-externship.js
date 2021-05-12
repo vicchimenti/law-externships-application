@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 6.23
+ *      @version 6.24
  */
 
 
@@ -53,7 +53,7 @@
     var hiddenType = '<span class="visually-hidden externshipType">No Type Provided</span>';
     var hiddenRegion = '<span class="visually-hidden region">No Region Provided</span>';
     var hiddenDescription = '<div class="visually-hidden description">No Description Provided</div>';
-    var beginningHTML = '<div class="externshipWrapper contentItem col card border-0 w-100 my-2" aria-label="' + externshipName + '" id="id' + contentId + '" data-position-default="Main" data-position-selected="Main">';
+    var beginningHTML = '<div class="externshipWrapper contentItem col card border-0 w-100 my-2 shadow" aria-label="' + externshipName + '" id="id' + contentId + '" data-position-default="Main" data-position-selected="Main">';
     var endingHTML = '</div>';
 
 
