@@ -3,6 +3,11 @@
     background-color: #f7f7f7;
 }
 
+/* *** title color *** */
+.externshipWrapper .card-title a {
+    color: #003282;
+}
+
 /* *** tune padding in card body *** */
 .externshipWrapper .card-body {
     padding: 0 0 1rem 0;
