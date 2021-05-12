@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 6.17
+ *      @version 6.18
  */
 
 
@@ -49,9 +49,10 @@
     var closeCardBody = '</div>';
     var openHiddenFields = '<div class="visually-hidden">';
     var closeHiddenFields = '</div>';
-    var searchFields = '<span class="visually-hidden jurisdiction externshipType">No Search Fields Provided</span>';
-    var hiddenDescription = '<div class="visually-hidden description">No Description Provided</div>';
+    var hiddenJurisdiction = '<span class="visually-hidden jurisdiction">No Jurisdiction Provided</span>';
+    var hiddenType = '<span class="visually-hidden externshipType">No Type Provided</span>';
     var hiddenRegion = '<span class="visually-hidden region">No Region Provided</span>';
+    var hiddenDescription = '<div class="visually-hidden description">No Description Provided</div>';
     var beginningHTML = '<div class="externshipWrapper contentItem col card border-0 w-100" aria-label="' + externshipName + '" id="id' + contentId + '" data-position-default="Main" data-position-selected="Main">';
     var endingHTML = '</div>';
 
@@ -88,15 +89,22 @@
 
 
     /***
-     *  confirm hidden search fields
+     *  confirm jurisdiction
      * 
      * */
-    if (jurisdiction != "" && externshipType != "") {
-        searchFields = '<span class="visually-hidden jurisdiction externshipType">' + jurisdiction + ' : ' + externshipType + '</span>';
-    } else if (jurisdiction == "" && externshipType != "") {
-        searchFields = '<span class="visually-hidden jurisdiction externshipType">' + externshipType + '</span>';
-    } else if (jurisdiction != "" && externshipType == "") {
-        searchFields = '<span class="visually-hidden jurisdiction externshipType">' + jurisdiction + '</span>';
+    if (jurisdiction != "") {
+        hiddenJurisdiction = '<span class="visually-hidden jurisdiction">' + jurisdiction + '</span>';
+    }
+
+
+
+
+    /***
+     *  confirm type
+     * 
+     * */
+    if (externshipType != "") {
+        hiddenType = '<span class="visually-hidden externshipType">' + externshipType + '</span>';
     }
 
 
@@ -134,7 +142,8 @@
     document.write(openCardBody);
     document.write(summary);
     document.write(openHiddenFields);
-    document.write(searchFields);
+    document.write(hiddenJurisdiction);
+    document.write(hiddenType);
     document.write(hiddenRegion);
     document.write(closeHiddenFields);
     document.write(hiddenDescription);
