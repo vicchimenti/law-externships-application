@@ -1,3 +1,8 @@
+/* *** background color *** */
+.externshipWrapper {
+    background-color: #f7f7f7;
+}
+
 /* *** tune padding in card body *** */
 .externshipWrapper .card-body {
     padding: 0 0 1rem 0;
