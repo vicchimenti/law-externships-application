@@ -104,29 +104,6 @@ $(function () {
 
 
 
-            //   ***   Subject Filter   ***   //
-            $(function () {
-                $('#SelectBox-BySubject').change(function () {
-                    let typeKey = $(this).val();
-                    if (typeKey) {
-                        $('.subject').filter(function (i, e) {
-                            var typeValue = $(this).text();
-                            if (typeValue.match(typeKey)) {
-                                $(this).parents('.externshipWrapper').removeClass('hideBySubject');
-                            } else {
-                                $(this).parents('.externshipWrapper').addClass('hideBySubject');
-                            }
-                        });
-                    } else {
-                        $('.externshipWrapper').removeClass('hideBySubject');
-                    }
-                    parseItems.process();
-                });
-            });
-
-
-
-
             //   ***   Region Filter   ***  //
             $(function () {
                 $('#SelectBox-ByRegion').change(function () {
