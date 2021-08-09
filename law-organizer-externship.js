@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 6.25
+ *      @version 6.26
  */
 
 
@@ -65,6 +65,9 @@
      * */
     if (agency != "") {
         titleLink = '<h3 class="card-title agency px-3"><a href="' + fullTextLink + '" class="card-link" title="View full ' + agency + ' profile">' + agency + '</a></h3>';
+    } else {
+        beginningHTML = '<div class="externshipWrapper contentItem col card border-0 w-100 my-2 shadow-sm visually-hidden" aria-label="' + externshipName + '" id="id' + contentId + '" data-position-default="Main" data-position-selected="Main">';
+        titleLink = '<h3 class="card-title agency px-3 visually-hidden">' + externshipName + '</h3>';
     }
 
 
