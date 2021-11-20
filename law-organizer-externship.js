@@ -53,8 +53,8 @@
     var hiddenType = '<span class="visually-hidden externshipType">No Type Provided</span>';
     var hiddenRegion = '<span class="visually-hidden region">No Region Provided</span>';
     var hiddenDescription = '<div class="visually-hidden description">No Description Provided</div>';
-    var beginningHTML = '<div class="externshipWrapper contentItem col card border-0 w-100 my-2 shadow-sm" aria-label="' + externshipName + '" id="id' + contentId + '" data-position-default="Main" data-position-selected="Main">';
-    var endingHTML = '</div>';
+    var beginningHTML = '<article class="externshipWrapper col card border-0 w-100 my-2 shadow-sm" id="externship' + contentId + '" aria-label="' + externshipName + '">';
+    var endingHTML = '</article>';
 
 
 
