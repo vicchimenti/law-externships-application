@@ -1,8 +1,9 @@
 /***
- *      @author Victor Chimenti, MSCS-SE '20
+ *      @author Victor Chimenti, MSCS
  *      @file law-organizer-externship.js
  *      @see Seattle University School of Law Externship Database
  *      law/organizer/externship
+ *      ID: 5304
  *
  *      This content layout will be sorted by the organizer and will link to the
  *      full text layout to reveal the full externship profile.
