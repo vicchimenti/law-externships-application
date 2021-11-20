@@ -139,7 +139,6 @@
      * 
      * */
     document.write(beginningHTML);
-    document.write(anchorTag);
     document.write(titleLink);
     document.write(openCardBody);
     document.write(summary);
