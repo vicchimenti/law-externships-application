@@ -5,4 +5,4 @@ The content type created is filterable and sorted via user determined custom fie
 
 ## TODO
 
--[x] Add Target Blank to Title Link
+- [x] Add Target Blank to Title Link
