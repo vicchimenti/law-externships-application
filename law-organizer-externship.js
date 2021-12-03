@@ -10,13 +10,13 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 6.28
+ *      @version 6.29
  */
 
 
 
 
- try {
+try {
 
     /***
      *  Assign local variables from the content type's fields
@@ -34,7 +34,7 @@
     var fullTextLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Name' output='fulltext' modifiers='striptags,htmlentities' />");
     var lastModifiedDate = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='meta' meta='last_modified' format='EEEE, MMMM d, yyyy' />");
     var publishDate = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='meta' meta='publish_date' format='EEEE, MMMM d, yyyy' />");
-    var contentId = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='meta' meta='content_id' />"); 
+    var contentId = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='meta' meta='content_id' />");
 
 
 
@@ -64,7 +64,7 @@
      * 
      * */
     if (agency != "") {
-        titleLink = '<h3 class="card-title agency px-3"><a href="' + fullTextLink + '" class="card-link" title="View full ' + agency + ' profile">' + agency + '</a></h3>';
+        titleLink = '<h3 class="card-title agency px-3"><a href="' + fullTextLink + '" class="card-link" target="_blank" title="View full ' + agency + ' profile">' + agency + '</a></h3>';
     } else {
         beginningHTML = '<article class="externshipWrapper col card border-0 w-100 my-2 shadow-sm visually-hidden" id="externship' + contentId + '" aria-label="' + externshipName + '">';
         titleLink = '<h3 class="card-title agency px-3 visually-hidden">' + externshipName + '</h3>';
