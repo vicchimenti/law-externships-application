@@ -218,20 +218,6 @@ try {
                         ? '<p class="card-text externshipType">' + externDict.externshipType.content + '</p>'
                         : '<span class="visually-hidden hidden externshipType">No Type Provided</span>';
 
-    
-
-
-
-    // if (subject != "" && location != "") {
-    //     summary = '<p class="card-text subject location">' + subject + ' (' + location + ')</p>';
-    // } else if (subject == "" && location != "") {
-    //     summary = '<p class="card-text subject location">(' + location + ')</p>';
-    // } else if (subject != "" && location == "") {
-    //     summary = '<p class="card-text subject location">' + subject + '</p>';
-    // } else {
-    //     openCardBody = '<div class="card-body mb-4 px-3">';
-    // }
-
 
 
 
