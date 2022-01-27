@@ -10,7 +10,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 7.0
+ *      @version 7.1
  */
 
 
@@ -249,6 +249,33 @@ try {
     document.write(hiddenDescription);
     document.write(closeCardBody);
     document.write(endingHTML);
+
+
+    /***
+     *  write document once
+     * 
+     * */
+     writeDocument(
+        [
+            beginningHTML,
+            openImageWrapper,
+            imageString,
+            closeImageWrapper,
+            openCardBody,
+            titleLink,
+            publishedLink,
+            summaryString,
+            dateline,
+            openHidden,
+            listOfCats,
+            pinnedItem,
+            closeHidden,
+            closeCardBody,
+            endingHTML
+        ]
+    );
+
+
 
 
 
