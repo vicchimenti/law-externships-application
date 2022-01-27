@@ -183,8 +183,8 @@ try {
      *  validate agency field and set fulltext link
      * 
      * */
-    if (agency != "") {
-        titleLink = '<h3 class="card-title agency px-3"><a href="' + fullTextLink + '" class="card-link" target="_blank" title="View full ' + agency + ' profile">' + agency + '</a></h3>';
+    if (agency) {
+        titleLink = '<h3 class="card-title agency px-3"><a href="' + externDict.fullTextLink.content + '" class="card-link" target="_blank" title="View full ' + externDict.agency.content + ' profile">' + externDict.agency.content + '</a></h3>';
     } else {
         beginningHTML = '<article class="externshipWrapper col card border-0 w-100 my-2 shadow-sm visually-hidden" id="externship' + contentId + '" aria-label="' + externshipName + '">';
         titleLink = '<h3 class="card-title agency px-3 visually-hidden">' + externshipName + '</h3>';
