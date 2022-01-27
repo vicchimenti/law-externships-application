@@ -10,7 +10,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 7.2
+ *      @version 7.3
  */
 
 
@@ -18,10 +18,10 @@
 /***
  *      Import T4 Utilities
  */
- importClass(com.terminalfour.media.IMediaManager);
- importClass(com.terminalfour.spring.ApplicationContextProvider);
+//  importClass(com.terminalfour.media.IMediaManager);
+//  importClass(com.terminalfour.spring.ApplicationContextProvider);
  importClass(com.terminalfour.publish.utils.BrokerUtils);
- importClass(com.terminalfour.media.utils.ImageInfo);
+//  importClass(com.terminalfour.media.utils.ImageInfo);
  
  
  
@@ -56,13 +56,13 @@
  /***
   *      Returns a media object
   */
- function getMediaInfo(mediaID) {
+//  function getMediaInfo(mediaID) {
  
-     let mediaManager = ApplicationContextProvider.getBean(IMediaManager);
-     let media = mediaManager.get(mediaID, language);
+//      let mediaManager = ApplicationContextProvider.getBean(IMediaManager);
+//      let media = mediaManager.get(mediaID, language);
  
-     return media;
- }
+//      return media;
+//  }
  
  
  
@@ -70,13 +70,13 @@
  /***
   *      Returns a media stream object
   */
- function readMedia(mediaID) {
+//  function readMedia(mediaID) {
  
-     let mediaObj = getMediaInfo(mediaID);
-     let oMediaStream = mediaObj.getMedia();
+//      let mediaObj = getMediaInfo(mediaID);
+//      let oMediaStream = mediaObj.getMedia();
  
-     return oMediaStream;
- }
+//      return oMediaStream;
+//  }
  
  
  
@@ -84,17 +84,17 @@
  /***
   *      Returns an array of list items
   */
- function assignList(arrayOfValues) {
+//  function assignList(arrayOfValues) {
  
-     let listValues = '';
+//      let listValues = '';
  
-     for (let i = 0; i < arrayOfValues.length; i++) {
+//      for (let i = 0; i < arrayOfValues.length; i++) {
  
-         listValues += '<li class="tag">' + arrayOfValues[i].trim() + '</li>';
-     }
+//          listValues += '<li class="tag">' + arrayOfValues[i].trim() + '</li>';
+//      }
  
-     return listValues;
- }
+//      return listValues;
+//  }
  
  
  
@@ -164,17 +164,14 @@ try {
      * 
      * */
     let titleLink = '<h3 class="card-title visually-hidden hidden">No Title Provided</h3>';
-    let subjectString = externDict.subject.content || null;
-    let locationString = externDict.location.content || null;
     let openCardBody = '<div class="card-body px-3">';
     let closeCardBody = '</div>';
     var openHiddenFields = '<div class="visually-hidden hidden">';
     var closeHiddenFields = '</div>';
-
-
     let beginningHTML = '<article class="externshipWrapper col card border-0 w-100 my-2 shadow-sm" id="externship' + externDict.contentId.content + '" aria-label="' + externDict.externshipName.content + '">';
     let endingHTML = '</article>';
-
+    let subjectString = externDict.subject.content || null;
+    let locationString = externDict.location.content || null;
 
 
 
@@ -197,8 +194,6 @@ try {
      *  confirm location and subject fields
      * 
      * */
-
-    
     let subtitle = ({
         subjectString , locationString
     }) => (
@@ -208,6 +203,8 @@ try {
             ? '<h4 class="card-subtitle mb-2 text-muted location">' + locationString + '</h4>'
             : '<h4 class="card-subtitle mb-2 text-muted subject location">' + subjectString + ' | ' + locationString + '</h4>'
     );
+
+
 
 
     /***
@@ -259,18 +256,18 @@ try {
      *  Write the document once
      * 
      * */
-    document.write(beginningHTML);
-    document.write(titleLink);
-    document.write(openCardBody);
+    // document.write(beginningHTML);
+    // document.write(titleLink);
+    // document.write(openCardBody);
     // document.write(summary);
-    document.write(openHiddenFields);
-    document.write(hiddenJurisdiction);
-    document.write(hiddenType);
-    document.write(hiddenRegion);
-    document.write(closeHiddenFields);
-    document.write(hiddenDescription);
-    document.write(closeCardBody);
-    document.write(endingHTML);
+    // document.write(openHiddenFields);
+    // document.write(hiddenJurisdiction);
+    // document.write(hiddenType);
+    // document.write(hiddenRegion);
+    // document.write(closeHiddenFields);
+    // document.write(hiddenDescription);
+    // document.write(closeCardBody);
+    // document.write(endingHTML);
 
 
     /***
@@ -283,18 +280,12 @@ try {
             openCardBody,
             titleLink,
             subtitle,
-
-            publishedLink,
-            summaryString,
-
             typeString,
-
-
-            dateline,
-            openHidden,
-            listOfCats,
-            pinnedItem,
-            closeHidden,
+            openHiddenFields,
+            hiddenJurisdiction,
+            hiddenRegion,
+            hiddenDescription,
+            closeHiddenFields,
             closeCardBody,
             endingHTML
         ]
