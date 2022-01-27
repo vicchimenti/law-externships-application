@@ -120,23 +120,23 @@ try {
     /***
      *      Dictionary of content
      * */
-         let externDict = {
+    let externDict = {
 
-            externshipName: getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
-            externshipId: getContentValues('<t4 type="content" name="Externship ID" output="normal" modifiers="striptags,htmlentities" />'),
-            agency: getContentValues('<t4 type="content" name="Agency" output="normal" modifiers="striptags,htmlentities" />'),
-            subject: getContentValues('<t4 type="content" name="Subject" output="normal" modifiers="striptags,htmlentities" />'),
-            location: getContentValues('<t4 type="content" name="Location" output="normal" modifiers="striptags,htmlentities" />'),
-            jurisdiction: getContentValues('<t4 type="content" name="Jurisdiction" output="normal" modifiers="striptags,htmlentities" />'),
-            externshipType: getContentValues('<t4 type="content" name="Type" output="normal" modifiers="striptags,htmlentities" />'),
-            region: getContentValues('<t4 type="content" name="Region" output="normal" modifiers="striptags,htmlentities" />'),
-            description: getContentValues('<t4 type="content" name="Externship Description" output="normal" modifiers="medialibrary,nav_sections" />'),
-            fullTextLink: getContentValues('<t4 type="content" name="Agency" output="fulltext" use-element="true" filename-element="Agency" modifiers="striptags,htmlentities" />'),
-            lastModifiedDate: getContentValues('<t4 type="meta" meta="last_modified" format="EEEE, MMMM d, yyyy" />'),
-            publishDate = getContentValues('<t4 type="meta" meta="publish_date" format="EEEE, MMMM d, yyyy" />'),
-            contentId: getContentValues('<t4 type="meta" meta="content_id" />')
-    
-        }
+        externshipName: getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
+        externshipId: getContentValues('<t4 type="content" name="Externship ID" output="normal" modifiers="striptags,htmlentities" />'),
+        agency: getContentValues('<t4 type="content" name="Agency" output="normal" modifiers="striptags,htmlentities" />'),
+        subject: getContentValues('<t4 type="content" name="Subject" output="normal" modifiers="striptags,htmlentities" />'),
+        location: getContentValues('<t4 type="content" name="Location" output="normal" modifiers="striptags,htmlentities" />'),
+        jurisdiction: getContentValues('<t4 type="content" name="Jurisdiction" output="normal" modifiers="striptags,htmlentities" />'),
+        externshipType: getContentValues('<t4 type="content" name="Type" output="normal" modifiers="striptags,htmlentities" />'),
+        region: getContentValues('<t4 type="content" name="Region" output="normal" modifiers="striptags,htmlentities" />'),
+        description: getContentValues('<t4 type="content" name="Externship Description" output="normal" modifiers="medialibrary,nav_sections" />'),
+        fullTextLink: getContentValues('<t4 type="content" name="Agency" output="fulltext" use-element="true" filename-element="Agency" modifiers="striptags,htmlentities" />'),
+        lastModifiedDate: getContentValues('<t4 type="meta" meta="last_modified" format="EEEE, MMMM d, yyyy" />'),
+        publishDate = getContentValues('<t4 type="meta" meta="publish_date" format="EEEE, MMMM d, yyyy" />'),
+        contentId: getContentValues('<t4 type="meta" meta="content_id" />')
+
+    }
 
     /***
      *  Assign local variables from the content type's fields
@@ -166,16 +166,10 @@ try {
     let titleLink = '<h3 class="card-title visually-hidden hidden">No Title Provided</h3>';
     let subjectString = externDict.subject.content || null;
     let locationString = externDict.location.content || null;
-
-
-    // var summary = '<p class="card-text visually-hidden hidden subject location">No Subject or Location Provided</p>';
-
-
     let openCardBody = '<div class="card-body px-3">';
     let closeCardBody = '</div>';
     var openHiddenFields = '<div class="visually-hidden hidden">';
     var closeHiddenFields = '</div>';
-    var hiddenDescription = '<div class="visually-hidden hidden description">No Description Provided</div>';
 
 
     let beginningHTML = '<article class="externshipWrapper col card border-0 w-100 my-2 shadow-sm" id="externship' + externDict.contentId.content + '" aria-label="' + externDict.externshipName.content + '">';
@@ -252,24 +246,13 @@ try {
 
 
 
-
-
-
-
-
-
-
     /***
      *  confirm region
      * 
      * */
-    if (region != "") {
-        hiddenRegion = '<span class="visually-hidden region">' + region + '</span>';
-    }
-
-    let hiddenRegion = (externDict.region.content)
-    ?'<span class="visually-hidden hidden region">No Region Provided</span>';
-
+    let hiddenRegion =  (externDict.region.content)
+                        ? '<span class="visually-hidden hidden region">' + externDict.region.content + '</span>'
+                        : '<span class="visually-hidden hidden region">No Region Provided</span>';
 
 
 
@@ -278,9 +261,10 @@ try {
      *  confirm description
      * 
      * */
-    if (description != "") {
-        hiddenDescription = '<div class="visually-hidden description">' + description + '</div>';
-    }
+    let hiddenDescription = (externDict.description.content)
+                            ? '<div class="visually-hidden hidden description">' + externDict.description.content + '</div>'
+                            : '<div class="visually-hidden hidden description">No Description Provided</div>';
+
 
 
 
