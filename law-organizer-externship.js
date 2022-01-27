@@ -163,16 +163,16 @@ try {
      *  Declare/Assign local variables with base formatting
      * 
      * */
-    var titleLink = '<h3 class="card-title visually-hidden">No Title Provided</h3>';
-    var summary = '<p class="card-text visually-hidden subject location">No Subject or Location Provided</p>';
+    var titleLink = '<h3 class="card-title visually-hidden hidden">No Title Provided</h3>';
+    var summary = '<p class="card-text visually-hidden hidden subject location">No Subject or Location Provided</p>';
     var openCardBody = '<div class="card-body px-3">';
     var closeCardBody = '</div>';
-    var openHiddenFields = '<div class="visually-hidden">';
+    var openHiddenFields = '<div class="visually-hidden hidden">';
     var closeHiddenFields = '</div>';
-    var hiddenJurisdiction = '<span class="visually-hidden jurisdiction">No Jurisdiction Provided</span>';
-    var hiddenType = '<span class="visually-hidden externshipType">No Type Provided</span>';
-    var hiddenRegion = '<span class="visually-hidden region">No Region Provided</span>';
-    var hiddenDescription = '<div class="visually-hidden description">No Description Provided</div>';
+    var hiddenJurisdiction = '<span class="visually-hidden hidden jurisdiction">No Jurisdiction Provided</span>';
+    var hiddenType = '<span class="visually-hidden hidden externshipType">No Type Provided</span>';
+    var hiddenRegion = '<span class="visually-hidden hidden region">No Region Provided</span>';
+    var hiddenDescription = '<div class="visually-hidden hidden description">No Description Provided</div>';
     var beginningHTML = '<article class="externshipWrapper col card border-0 w-100 my-2 shadow-sm" id="externship' + contentId + '" aria-label="' + externshipName + '">';
     var endingHTML = '</article>';
 
