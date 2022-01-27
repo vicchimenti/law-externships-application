@@ -163,18 +163,22 @@ try {
      *  Declare/Assign local variables with base formatting
      * 
      * */
-    var titleLink = '<h3 class="card-title visually-hidden hidden">No Title Provided</h3>';
-    var summary = '<p class="card-text visually-hidden hidden subject location">No Subject or Location Provided</p>';
-    var openCardBody = '<div class="card-body px-3">';
-    var closeCardBody = '</div>';
+    let titleLink = '<h3 class="card-title visually-hidden hidden">No Title Provided</h3>';
+
+
+    // var summary = '<p class="card-text visually-hidden hidden subject location">No Subject or Location Provided</p>';
+
+
+    let openCardBody = '<div class="card-body px-3">';
+    let closeCardBody = '</div>';
     var openHiddenFields = '<div class="visually-hidden hidden">';
     var closeHiddenFields = '</div>';
-    var hiddenJurisdiction = '<span class="visually-hidden hidden jurisdiction">No Jurisdiction Provided</span>';
-    var hiddenType = '<span class="visually-hidden hidden externshipType">No Type Provided</span>';
     var hiddenRegion = '<span class="visually-hidden hidden region">No Region Provided</span>';
     var hiddenDescription = '<div class="visually-hidden hidden description">No Description Provided</div>';
-    var beginningHTML = '<article class="externshipWrapper col card border-0 w-100 my-2 shadow-sm" id="externship' + externDict.contentId.content + '" aria-label="' + externDict.externshipName.content + '">';
-    var endingHTML = '</article>';
+
+
+    let beginningHTML = '<article class="externshipWrapper col card border-0 w-100 my-2 shadow-sm" id="externship' + externDict.contentId.content + '" aria-label="' + externDict.externshipName.content + '">';
+    let endingHTML = '</article>';
 
 
 
@@ -188,6 +192,7 @@ try {
     } else {
         beginningHTML = '<article class="externshipWrapper col card border-0 w-100 my-2 shadow-sm visually-hidden" id="externship' + externDict.contentId.content + '" aria-label="' + externDict.externshipName.content + '">';
         titleLink = '<h3 class="card-title agency px-3 visually-hidden">' + externDict.externshipName.content + '</h3>';
+        openCardBody = '<div class="card-body mb-4 px-3">';
     }
 
 
@@ -197,16 +202,38 @@ try {
      *  confirm location and subject fields
      * 
      * */
-    if (subject != "" && location != "") {
-        summary = '<p class="card-text subject location">' + subject + ' (' + location + ')</p>';
-    } else if (subject == "" && location != "") {
-        summary = '<p class="card-text subject location">(' + location + ')</p>';
-    } else if (subject != "" && location == "") {
-        summary = '<p class="card-text subject location">' + subject + '</p>';
-    } else {
-        // When summary p is visually hidden compenstate for bottom margin in the card body
-        openCardBody = '<div class="card-body mb-4 px-3">';
-    }
+    let subtitle = ({
+        subject, location
+    }) => (
+        (!subject)
+            ? '<p class="card-subtitle visually-hidden hidden subject location">No valid Location or Subject provided</p>'
+            : (location)
+            ? '<h4 class="card-subtitle mb-2 text-muted location">' + externDict.location.content + '</h4>'
+            : '<h4 class="card-subtitle mb-2 text-muted subject location">' + externDict.subject.content + ' | ' + externDict.location.content + '</h4>'
+    );
+
+
+    /***
+     *  confirm type
+     * 
+     * */
+    let typeString =    (externshipType)
+                        ? '<p class="card-text externshipType">' + externDict.externshipType.content + '</p>'
+                        : '<span class="visually-hidden hidden externshipType">No Type Provided</span>';
+
+    
+
+
+
+    // if (subject != "" && location != "") {
+    //     summary = '<p class="card-text subject location">' + subject + ' (' + location + ')</p>';
+    // } else if (subject == "" && location != "") {
+    //     summary = '<p class="card-text subject location">(' + location + ')</p>';
+    // } else if (subject != "" && location == "") {
+    //     summary = '<p class="card-text subject location">' + subject + '</p>';
+    // } else {
+    //     openCardBody = '<div class="card-body mb-4 px-3">';
+    // }
 
 
 
@@ -215,20 +242,16 @@ try {
      *  confirm jurisdiction
      * 
      * */
-    if (jurisdiction != "") {
-        hiddenJurisdiction = '<span class="visually-hidden jurisdiction">' + jurisdiction + '</span>';
-    }
+    let hiddenJurisdiction =    (jurisdiction) 
+                                ? '<span class="visually-hidden hidden jurisdiction">' + externDict.jurisdiction.content + '</span>'
+                                : '<span class="visually-hidden hidden jurisdiction">No Jurisdiction Provided</span>';
 
 
 
 
-    /***
-     *  confirm type
-     * 
-     * */
-    if (externshipType != "") {
-        hiddenType = '<span class="visually-hidden externshipType">' + externshipType + '</span>';
-    }
+
+
+
 
 
 
@@ -262,7 +285,7 @@ try {
     document.write(beginningHTML);
     document.write(titleLink);
     document.write(openCardBody);
-    document.write(summary);
+    // document.write(summary);
     document.write(openHiddenFields);
     document.write(hiddenJurisdiction);
     document.write(hiddenType);
@@ -280,13 +303,16 @@ try {
      writeDocument(
         [
             beginningHTML,
-            openImageWrapper,
-            imageString,
-            closeImageWrapper,
             openCardBody,
             titleLink,
+            subtitle,
+
             publishedLink,
             summaryString,
+
+            typeString,
+
+
             dateline,
             openHidden,
             listOfCats,
