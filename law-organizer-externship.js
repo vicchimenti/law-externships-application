@@ -127,6 +127,7 @@ try {
             agency: getContentValues('<t4 type="content" name="Agency" output="normal" modifiers="striptags,htmlentities" />'),
             subject: getContentValues('<t4 type="content" name="Subject" output="normal" modifiers="striptags,htmlentities" />'),
             location: getContentValues('<t4 type="content" name="Location" output="normal" modifiers="striptags,htmlentities" />'),
+            jurisdiction: getContentValues('<t4 type="content" name="Jurisdiction" output="normal" modifiers="striptags,htmlentities" />'),
 
 
 
