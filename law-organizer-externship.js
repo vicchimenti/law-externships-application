@@ -164,6 +164,8 @@ try {
      * 
      * */
     let titleLink = '<h3 class="card-title visually-hidden hidden">No Title Provided</h3>';
+    let subjectString = externDict.subject.content || null;
+    let locationString = externDict.location.content || null;
 
 
     // var summary = '<p class="card-text visually-hidden hidden subject location">No Subject or Location Provided</p>';
@@ -173,7 +175,6 @@ try {
     let closeCardBody = '</div>';
     var openHiddenFields = '<div class="visually-hidden hidden">';
     var closeHiddenFields = '</div>';
-    var hiddenRegion = '<span class="visually-hidden hidden region">No Region Provided</span>';
     var hiddenDescription = '<div class="visually-hidden hidden description">No Description Provided</div>';
 
 
@@ -202,14 +203,16 @@ try {
      *  confirm location and subject fields
      * 
      * */
+
+    
     let subtitle = ({
-        subject, location
+        subjectString , locationString
     }) => (
-        (!subject)
+        (!subjectString)
             ? '<p class="card-subtitle visually-hidden hidden subject location">No valid Location or Subject provided</p>'
-            : (location)
-            ? '<h4 class="card-subtitle mb-2 text-muted location">' + externDict.location.content + '</h4>'
-            : '<h4 class="card-subtitle mb-2 text-muted subject location">' + externDict.subject.content + ' | ' + externDict.location.content + '</h4>'
+            : (locationString)
+            ? '<h4 class="card-subtitle mb-2 text-muted location">' + locationString + '</h4>'
+            : '<h4 class="card-subtitle mb-2 text-muted subject location">' + subjectString + ' | ' + locationString + '</h4>'
     );
 
 
@@ -217,7 +220,7 @@ try {
      *  confirm type
      * 
      * */
-    let typeString =    (externshipType)
+    let typeString =    (externDict.externshipType.content)
                         ? '<p class="card-text externshipType">' + externDict.externshipType.content + '</p>'
                         : '<span class="visually-hidden hidden externshipType">No Type Provided</span>';
 
@@ -242,7 +245,7 @@ try {
      *  confirm jurisdiction
      * 
      * */
-    let hiddenJurisdiction =    (jurisdiction) 
+    let hiddenJurisdiction =    (externDict.jurisdiction.content) 
                                 ? '<span class="visually-hidden hidden jurisdiction">' + externDict.jurisdiction.content + '</span>'
                                 : '<span class="visually-hidden hidden jurisdiction">No Jurisdiction Provided</span>';
 
@@ -263,6 +266,10 @@ try {
     if (region != "") {
         hiddenRegion = '<span class="visually-hidden region">' + region + '</span>';
     }
+
+    let hiddenRegion = (externDict.region.content)
+    ?'<span class="visually-hidden hidden region">No Region Provided</span>';
+
 
 
 
