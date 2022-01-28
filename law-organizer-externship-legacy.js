@@ -53,7 +53,7 @@ try {
     var hiddenType = '<span class="visually-hidden externshipType">No Type Provided</span>';
     var hiddenRegion = '<span class="visually-hidden region">No Region Provided</span>';
     var hiddenDescription = '<div class="visually-hidden description">No Description Provided</div>';
-    var beginningHTML = '<article class="externshipWrapper col card border-0 w-100 my-2 shadow-sm" id="externship' + contentId + '" aria-label="' + externshipName + '">';
+    var beginningHTML = '<article class="externshipWrapper col card border-0 my-2 shadow-sm" id="externship' + contentId + '" aria-label="' + externshipName + '">';
     var endingHTML = '</article>';
 
 
@@ -66,7 +66,7 @@ try {
     if (agency != "") {
         titleLink = '<h3 class="card-title agency px-3"><a href="' + fullTextLink + '" class="card-link" target="_blank" title="View full ' + agency + ' profile">' + agency + '</a></h3>';
     } else {
-        beginningHTML = '<article class="externshipWrapper col card border-0 w-100 my-2 shadow-sm visually-hidden" id="externship' + contentId + '" aria-label="' + externshipName + '">';
+        beginningHTML = '<article class="externshipWrapper col card border-0 my-2 shadow-sm visually-hidden" id="externship' + contentId + '" aria-label="' + externshipName + '">';
         titleLink = '<h3 class="card-title agency px-3 visually-hidden">' + externshipName + '</h3>';
     }
 
