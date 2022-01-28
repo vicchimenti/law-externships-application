@@ -105,7 +105,7 @@ try {
     let closeCardBody = '</div>';
     let openHiddenFields = '<div class="visually-hidden hidden">';
     let closeHiddenFields = '</div>';
-    let beginningHTML = '<article class="externshipWrapper col card border-0 w-100 my-2 shadow-sm" id="externship' + externDict.contentId.content + '" aria-label="' + externDict.externshipName.content + '">';
+    let beginningHTML = '<article class="externshipWrapper col card border-0 my-2 shadow-sm" id="externship' + externDict.contentId.content + '" aria-label="' + externDict.externshipName.content + '">';
     let endingHTML = '</article>';
     // let subjectString = externDict.subject.content || null;
     // let locationString = externDict.location.content || null;
@@ -119,7 +119,7 @@ try {
     if (agency) {
         titleLink = '<h3 class="card-title agency px-3"><a href="' + externDict.fullTextLink.content + '" class="card-link" target="_blank" title="View full ' + externDict.agency.content + ' profile">' + externDict.agency.content + '</a></h3>';
     } else {
-        beginningHTML = '<article class="externshipWrapper col card border-0 w-100 my-2 shadow-sm visually-hidden" id="externship' + externDict.contentId.content + '" aria-label="' + externDict.externshipName.content + '">';
+        beginningHTML = '<article class="externshipWrapper col card border-0 my-2 shadow-sm visually-hidden" id="externship' + externDict.contentId.content + '" aria-label="' + externDict.externshipName.content + '">';
         titleLink = '<h3 class="card-title agency px-3 visually-hidden">' + externDict.externshipName.content + '</h3>';
         openCardBody = '<div class="card-body mb-4 px-3">';
     }
