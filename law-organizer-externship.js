@@ -10,7 +10,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 7.3
+ *      @version 7.4
  */
 
 
@@ -166,8 +166,8 @@ try {
     let titleLink = '<h3 class="card-title visually-hidden hidden">No Title Provided</h3>';
     let openCardBody = '<div class="card-body px-3">';
     let closeCardBody = '</div>';
-    var openHiddenFields = '<div class="visually-hidden hidden">';
-    var closeHiddenFields = '</div>';
+    let openHiddenFields = '<div class="visually-hidden hidden">';
+    let closeHiddenFields = '</div>';
     let beginningHTML = '<article class="externshipWrapper col card border-0 w-100 my-2 shadow-sm" id="externship' + externDict.contentId.content + '" aria-label="' + externDict.externshipName.content + '">';
     let endingHTML = '</article>';
     let subjectString = externDict.subject.content || null;
@@ -203,6 +203,7 @@ try {
             ? '<h4 class="card-subtitle mb-2 text-muted location">' + locationString + '</h4>'
             : '<h4 class="card-subtitle mb-2 text-muted subject location">' + subjectString + ' | ' + locationString + '</h4>'
     );
+    let subtitleString = subtitle.toString();
 
 
 
@@ -279,7 +280,7 @@ try {
             beginningHTML,
             openCardBody,
             titleLink,
-            subtitle,
+            subtitleString,
             typeString,
             openHiddenFields,
             hiddenJurisdiction,
