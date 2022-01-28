@@ -10,7 +10,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 7.4
+ *      @version 7.5
  */
 
 
@@ -20,7 +20,7 @@
  */
 //  importClass(com.terminalfour.media.IMediaManager);
 //  importClass(com.terminalfour.spring.ApplicationContextProvider);
- importClass(com.terminalfour.publish.utils.BrokerUtils);
+//  importClass(com.terminalfour.publish.utils.BrokerUtils);
 //  importClass(com.terminalfour.media.utils.ImageInfo);
  
  
@@ -49,52 +49,6 @@
          }
      }
  }
- 
- 
- 
- 
- /***
-  *      Returns a media object
-  */
-//  function getMediaInfo(mediaID) {
- 
-//      let mediaManager = ApplicationContextProvider.getBean(IMediaManager);
-//      let media = mediaManager.get(mediaID, language);
- 
-//      return media;
-//  }
- 
- 
- 
- 
- /***
-  *      Returns a media stream object
-  */
-//  function readMedia(mediaID) {
- 
-//      let mediaObj = getMediaInfo(mediaID);
-//      let oMediaStream = mediaObj.getMedia();
- 
-//      return oMediaStream;
-//  }
- 
- 
- 
- 
- /***
-  *      Returns an array of list items
-  */
-//  function assignList(arrayOfValues) {
- 
-//      let listValues = '';
- 
-//      for (let i = 0; i < arrayOfValues.length; i++) {
- 
-//          listValues += '<li class="tag">' + arrayOfValues[i].trim() + '</li>';
-//      }
- 
-//      return listValues;
-//  }
  
  
  
@@ -138,23 +92,6 @@ try {
 
     };
 
-    /***
-     *  Assign local variables from the content type's fields
-     * 
-     * */
-    // var externshipName = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Name' output='normal' modifiers='striptags,htmlentities' />");
-    // var externshipId = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Externship ID' output='normal' modifiers='striptags,htmlentities' />");
-    // var agency = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Agency' output='normal' modifiers='striptags,htmlentities' />");
-    // var subject = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Subject' output='normal' modifiers='striptags,htmlentities' />");
-    // var location = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Location' output='normal' modifiers='striptags,htmlentities' />");
-    // var jurisdiction = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Jurisdiction' output='normal' modifiers='striptags,htmlentities' />");
-    // var externshipType = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Type' output='normal' modifiers='striptags,htmlentities' />");
-    // var region = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Region' output='normal' modifiers='striptags,htmlentities' />");
-    // var description = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Externship Description' output='normal' modifiers='medialibrary,nav_sections,striptags' />");
-    // var fullTextLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Agency' output='fulltext' use-element='true' filename-element='Agency' modifiers='striptags,htmlentities' />");
-    // var lastModifiedDate = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='meta' meta='last_modified' format='EEEE, MMMM d, yyyy' />");
-    // var publishDate = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='meta' meta='publish_date' format='EEEE, MMMM d, yyyy' />");
-    // var contentId = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='meta' meta='content_id' />");
 
 
 
@@ -194,15 +131,15 @@ try {
      *  confirm location and subject fields
      * 
      * */
-    let subtitle = ({
-        (externDict.subject.content) , (externDict.location.content)
-    }) => (
-        (!externDict.subject.content)
-            ? '<p class="card-subtitle visually-hidden hidden subject location">No valid Location or Subject provided</p>'
-            : (externDict.location.content)
-            ? '<h4 class="card-subtitle mb-2 text-muted location">' + externDict.location.content + '</h4>'
-            : '<h4 class="card-subtitle mb-2 text-muted subject location">' + externDict.subject.content + ' | ' + externDict.location.content + '</h4>'
-    );
+    // let subtitle = ({
+    //     (externDict.subject.content) , (externDict.location.content)
+    // }) => (
+    //     (!externDict.subject.content)
+    //         ? '<p class="card-subtitle visually-hidden hidden subject location">No valid Location or Subject provided</p>'
+    //         : (externDict.location.content)
+    //         ? '<h4 class="card-subtitle mb-2 text-muted location">' + externDict.location.content + '</h4>'
+    //         : '<h4 class="card-subtitle mb-2 text-muted subject location">' + externDict.subject.content + ' | ' + externDict.location.content + '</h4>'
+    // );
     // let subtitleString = subtitle.toString();
 
 
@@ -253,23 +190,6 @@ try {
 
 
 
-    /***
-     *  Write the document once
-     * 
-     * */
-    // document.write(beginningHTML);
-    // document.write(titleLink);
-    // document.write(openCardBody);
-    // document.write(summary);
-    // document.write(openHiddenFields);
-    // document.write(hiddenJurisdiction);
-    // document.write(hiddenType);
-    // document.write(hiddenRegion);
-    // document.write(closeHiddenFields);
-    // document.write(hiddenDescription);
-    // document.write(closeCardBody);
-    // document.write(endingHTML);
-
 
     /***
      *  write document once
@@ -280,7 +200,7 @@ try {
             beginningHTML,
             openCardBody,
             titleLink,
-            subtitle,
+            // subtitle,
             typeString,
             openHiddenFields,
             hiddenJurisdiction,
