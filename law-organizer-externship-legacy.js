@@ -1,6 +1,6 @@
 /***
  *      @author Victor Chimenti, MSCS
- *      @file law-organizer-externship.js
+ *      @file law-organizer-externship-legacy.js
  *      @see Seattle University School of Law Externship Database
  *      law/organizer/externship
  *      ID: 5304
@@ -10,7 +10,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 6.29.2
+ *      @version 6.29.3
  */
 
 
