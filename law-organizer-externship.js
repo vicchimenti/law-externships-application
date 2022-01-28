@@ -10,7 +10,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 7.5
+ *      @version 7.6
  */
 
 
@@ -19,8 +19,8 @@
  *      Import T4 Utilities
  */
 //  importClass(com.terminalfour.media.IMediaManager);
-//  importClass(com.terminalfour.spring.ApplicationContextProvider);
-//  importClass(com.terminalfour.publish.utils.BrokerUtils);
+ importClass(com.terminalfour.spring.ApplicationContextProvider);
+ importClass(com.terminalfour.publish.utils.BrokerUtils);
 //  importClass(com.terminalfour.media.utils.ImageInfo);
  
  
@@ -200,7 +200,6 @@ try {
             beginningHTML,
             openCardBody,
             titleLink,
-            // subtitle,
             typeString,
             openHiddenFields,
             hiddenJurisdiction,
