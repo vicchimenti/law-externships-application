@@ -136,7 +136,7 @@ try {
         publishDate = getContentValues('<t4 type="meta" meta="publish_date" format="EEEE, MMMM d, yyyy" />'),
         contentId: getContentValues('<t4 type="meta" meta="content_id" />')
 
-    }
+    };
 
     /***
      *  Assign local variables from the content type's fields
@@ -170,8 +170,8 @@ try {
     let closeHiddenFields = '</div>';
     let beginningHTML = '<article class="externshipWrapper col card border-0 w-100 my-2 shadow-sm" id="externship' + externDict.contentId.content + '" aria-label="' + externDict.externshipName.content + '">';
     let endingHTML = '</article>';
-    let subjectString = externDict.subject.content || null;
-    let locationString = externDict.location.content || null;
+    // let subjectString = externDict.subject.content || null;
+    // let locationString = externDict.location.content || null;
 
 
 
@@ -195,15 +195,15 @@ try {
      * 
      * */
     let subtitle = ({
-        subjectString , locationString
+        (externDict.subject.content) , (externDict.location.content)
     }) => (
-        (!subjectString)
+        (!externDict.subject.content)
             ? '<p class="card-subtitle visually-hidden hidden subject location">No valid Location or Subject provided</p>'
-            : (locationString)
-            ? '<h4 class="card-subtitle mb-2 text-muted location">' + locationString + '</h4>'
-            : '<h4 class="card-subtitle mb-2 text-muted subject location">' + subjectString + ' | ' + locationString + '</h4>'
+            : (externDict.location.content)
+            ? '<h4 class="card-subtitle mb-2 text-muted location">' + externDict.location.content + '</h4>'
+            : '<h4 class="card-subtitle mb-2 text-muted subject location">' + externDict.subject.content + ' | ' + externDict.location.content + '</h4>'
     );
-    let subtitleString = subtitle.toString();
+    // let subtitleString = subtitle.toString();
 
 
 
@@ -280,7 +280,7 @@ try {
             beginningHTML,
             openCardBody,
             titleLink,
-            subtitleString,
+            subtitle,
             typeString,
             openHiddenFields,
             hiddenJurisdiction,
