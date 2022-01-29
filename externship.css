@@ -1,9 +1,12 @@
-/* *** background color *** */
+/* *** Externship styles *** */
 .externshipWrapper {
     background-color: #f7f7f7;
 }
 
-/* *** title color *** */
 .externshipWrapper .card-title a {
     color: #003282;
+}
+
+.externshipWrapper .card-body p {
+    color: #000000;
 }
