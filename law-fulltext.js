@@ -48,10 +48,10 @@ try {
     var closeCardBody = '</div>';
     var openHiddenFields = '<div class="visually-hidden hidden">';
     var closeHiddenFields = '</div>';
-    var hiddenJurisdiction = '<span class="visually-hidden hidden jurisdiction">No Jurisdiction Provided</span>';
+    var jurisdictionString = '<span class="visually-hidden hidden jurisdiction">No Jurisdiction Provided</span>';
     var typeString = '<span class="visually-hidden hidden externshipType">No Type Provided</span>';
     var hiddenRegion = '<span class="visually-hidden hidden region">No Region Provided</span>';
-    var hiddenDescription = '<div class="visually-hidden hidden description">No Description Provided</div>';
+    var descriptionString = '<div class="visually-hidden hidden description">No Description Provided</div>';
     var beginningHTML = '<article class="externshipWrapper col card border-0 my-2 shadow-sm" id="externship' + contentId + '" aria-label="' + externshipName + '">';
     var endingHTML = '</article>';
 
@@ -92,7 +92,7 @@ try {
      * 
      * */
     if (externshipType != "") {
-        typeString = '<p class="card-text fst-italic externshipType">' + externshipType + '</p>';
+        typeString = '<p class="card-text externshipType">' + externshipType + '</p>';
     }
 
 
@@ -103,7 +103,18 @@ try {
      * 
      * */
     if (jurisdiction != "") {
-        hiddenJurisdiction = '<span class="visually-hidden jurisdiction">' + jurisdiction + '</span>';
+        jurisdictionString = '<p class="card-text externshipType">' + jurisdiction + '</span>';
+    }
+
+
+
+
+    /***
+     *  confirm description
+     * 
+     * */
+    if (description != "") {
+        descriptionString = '<div class="description">' + description + '</div>';
     }
 
 
@@ -120,13 +131,7 @@ try {
 
 
 
-    /***
-     *  confirm description
-     * 
-     * */
-    if (description != "") {
-        hiddenDescription = '<div class="visually-hidden hidden description">' + description + '</div>';
-    }
+
 
 
 
@@ -140,10 +145,10 @@ try {
     document.write(titleLink);
     document.write(subtitle);
     document.write(typeString);
+    document.write(jurisdictionString);
+    document.write(descriptionString);
     document.write(openHiddenFields);
-    document.write(hiddenJurisdiction);
     document.write(hiddenRegion);
-    document.write(hiddenDescription);
     document.write(closeHiddenFields);
     document.write(closeCardBody);
     document.write(endingHTML);
