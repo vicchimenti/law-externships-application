@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 8.5
+ *      @version 8.5.1
  */
 
 
@@ -27,8 +27,6 @@ try {
     var subject = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Subject' output='normal' modifiers='striptags,htmlentities' />");
     var location = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Location' output='normal' modifiers='striptags,htmlentities' />");
     var jurisdiction = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Jurisdiction' output='normal' modifiers='striptags,htmlentities' />");
-    // var externshipType = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Type' output='normal' modifiers='striptags,htmlentities' />");
-    // var region = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Region' output='normal' modifiers='striptags,htmlentities' />");
     var description = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Externship Description' output='normal' modifiers='medialibrary,nav_sections' />");
     var externalLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='URL' output='normal' modifiers='striptags,htmlentities' />");
     var lastModifiedDate = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='meta' meta='last_modified' format='EEEE, MMMM d, yyyy' />");
@@ -50,8 +48,6 @@ try {
     var openHiddenFields = '<div class="visually-hidden hidden">';
     var closeHiddenFields = '</div>';
     var jurisdictionString = '<span class="visually-hidden hidden jurisdiction">No Jurisdiction Provided</span>';
-    // var typeString = '<span class="visually-hidden hidden externshipType">No Type Provided</span>';
-    // var hiddenRegion = '<span class="visually-hidden hidden region">No Region Provided</span>';
     var descriptionString = '<div class="visually-hidden hidden description">No Description Provided</div>';
     var beginningHTML = '<article class="externshipFulltext standardContent col card border-0" id="externship' + contentId + '" aria-label="' + externshipName + '" data-autonumber="' + externshipId + '" >';
     var endingHTML = '</article>';
@@ -96,17 +92,6 @@ try {
 
 
     /***
-     *  confirm type
-     * 
-     * */
-    // if (externshipType != "") {
-    //     typeString = '<p class="card-text externshipType">' + externshipType + '</p>';
-    // }
-
-
-
-
-    /***
      *  confirm jurisdiction
      * 
      * */
@@ -124,21 +109,6 @@ try {
     if (description != "") {
         descriptionString = '<div class="externshipDescription">' + description + '</div>';
     }
-
-
-
-
-    /***
-     *  confirm region
-     * 
-     * */
-    // if (region != "") {
-    //     hiddenRegion = '<span class="visually-hidden hidden region">' + region + '</span>';
-    // }
-
-
-
-
 
 
 
