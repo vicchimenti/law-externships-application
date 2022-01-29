@@ -114,7 +114,7 @@ try {
      * 
      * */
     if (description != "") {
-        descriptionString = '<div class="externshipDescription">' + description + '</div>';
+        descriptionString = '<div class="externshipDescription"><h3>Externship Description</h3>' + description + '</div><h4>Program Details</h4>';
     }
 
 
@@ -152,12 +152,24 @@ try {
 
 
     /***
-     *  confirm deadline
+     *  confirm applications
      * 
      * */
     let acceptingString =   (accepting != "") 
                             ? '<p class="card-text accepting"><strong>Accepts Applications: </strong>' + accepting + '</p>'
                             : '<span class="visually-hidden hidden accepting">No parameters provided</span>';
+
+
+
+
+    /***
+     *  confirm supervisor
+     * 
+     * */
+    let supervisorString =  (supervisor != "") 
+                            ? '<p class="card-text supervisor"><strong>Supervisor: </strong>' + supervisor + '</p>'
+                            : '<span class="visually-hidden hidden supervisor">No supervisor provided</span>';
+
 
 
 
@@ -181,6 +193,9 @@ try {
 
 
     document.write(descriptionString);
+
+    document.write(supervisorString);
+
     document.write(jurisdictionString);
 
     document.write(closeCardBody);
