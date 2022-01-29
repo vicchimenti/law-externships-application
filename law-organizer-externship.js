@@ -92,22 +92,22 @@ try {
 
 
     /***
-     *  confirm jurisdiction
+     *  confirm type
      * 
      * */
-    if (jurisdiction != "") {
-        hiddenJurisdiction = '<span class="visually-hidden jurisdiction">' + jurisdiction + '</span>';
+    if (externshipType != "") {
+        typeString = '<p class="card-text externshipType">' + externshipType + '</p>';
     }
 
 
 
 
     /***
-     *  confirm type
+     *  confirm jurisdiction
      * 
      * */
-    if (externshipType != "") {
-        typeString = '<p class="card-text externshipType">' + externshipType + '</p>';
+    if (jurisdiction != "") {
+        hiddenJurisdiction = '<span class="visually-hidden jurisdiction">' + jurisdiction + '</span>';
     }
 
 
