@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 8.5.4
+ *      @version 8.5.5
  */
 
 
@@ -161,9 +161,9 @@ try {
     document.write(openCardBody);
     document.write(titleLink);
     document.write(subtitle);
+    document.write(deadlineString);
     document.write(prerequisiteString);
     document.write(materialString);
-    document.write(deadlineString);
 
 
 
