@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 8.5.5
+ *      @version 8.5.6
  */
 
 
@@ -124,7 +124,7 @@ try {
      * */
     let prerequisiteString =    (prerequisites != "") 
                                 ? '<p class="card-text prerequisites"><strong>Prerequisites: </strong>' + prerequisites + '</p>'
-                                : '<span class="visually-hidden hidden prerequisites">No Prerequisites Provided</span>';
+                                : '<span class="visually-hidden hidden prerequisites">No prerequisites provided</span>';
 
 
 
@@ -135,18 +135,29 @@ try {
      * */
     let materialString =   (materials != "") 
                             ? '<p class="card-text materials"><strong>Materials: </strong>' + materials + '</p>'
-                            : '<span class="visually-hidden hidden materials">No Prerequisites Provided</span>';
+                            : '<span class="visually-hidden hidden materials">No materials provided</span>';
 
 
 
 
     /***
-     *  confirm materials
+     *  confirm deadline
      * 
      * */
     let deadlineString =    (deadline != "") 
                             ? '<p class="card-text deadline"><strong>Deadline: </strong>' + deadline + '</p>'
-                            : '<span class="visually-hidden hidden deadline">No Prerequisites Provided</span>';
+                            : '<span class="visually-hidden hidden deadline">No deadline provided</span>';
+
+
+
+
+    /***
+     *  confirm deadline
+     * 
+     * */
+    let acceptingString =   (accepting != "") 
+                            ? '<p class="card-text accepting"><strong>Accepts Applications: </strong>' + accepting + '</p>'
+                            : '<span class="visually-hidden hidden accepting">No parameters provided</span>';
 
 
 
@@ -162,6 +173,7 @@ try {
     document.write(titleLink);
     document.write(subtitle);
     document.write(deadlineString);
+    document.write(acceptingString);
     document.write(prerequisiteString);
     document.write(materialString);
 
