@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 8.5.6
+ *      @version 8.5.7
  */
 
 
@@ -184,6 +184,17 @@ try {
 
 
 
+    /***
+     *  confirm previous externs
+     * 
+     * */
+    let previousExternsString = (previousExterns != "") 
+                                ? '<p class="card-text previousExterns"><strong>Previous Externs: </strong>' + previousExterns + '</p>'
+                                : '<span class="visually-hidden hidden previousExterns">No previous externs provided</span>';
+
+
+
+
 
 
     /***
@@ -207,6 +218,7 @@ try {
 
     document.write(supervisorString);
     document.write(hoursString);
+    document.write(previousExternsString);
 
 
     document.write(jurisdictionString);
