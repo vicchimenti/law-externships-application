@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 8.5.2
+ *      @version 8.5.3
  */
 
 
@@ -103,7 +103,7 @@ try {
      * 
      * */
     if (jurisdiction != "") {
-        jurisdictionString = '<p class="card-text externshipType">' + jurisdiction + '</p>';
+        jurisdictionString = '<p class="card-text externshipType"><strong>Jurisdiction: </strong>' + jurisdiction + '</p>';
     }
 
 
@@ -118,6 +118,15 @@ try {
     }
 
 
+    /***
+     *  confirm prerequisites
+     * 
+     * */
+    let prerequisiteString =    (prerequisites != "") 
+                                ? '<p class="card-text prerequisites"><strong>Prerequisites: </strong>' + prerequisites + '</p>'
+                                : '<span class="visually-hidden hidden prerequisites">No Prerequisites Provided</span>';
+
+
 
 
 
@@ -130,7 +139,10 @@ try {
     document.write(openCardBody);
     document.write(titleLink);
     document.write(subtitle);
+    document.write(prerequisiteString);
+
     document.write(jurisdictionString);
+
     document.write(descriptionString);
     document.write(closeCardBody);
     document.write(openHiddenFields);
