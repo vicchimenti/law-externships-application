@@ -82,9 +82,6 @@ try {
         subtitle = '<p class="card-text subject location">' + location + '</p>';
     } else if (subject != "" && location == "") {
         subtitle = '<p class="card-text subject location">' + subject + '</p>';
-    } else {
-        // When subtitle p is visually hidden compenstate for bottom margin in the card body
-        // openCardBody = '<div class="card-body mb-4 px-3">';
     }
 
 
