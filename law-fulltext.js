@@ -130,12 +130,23 @@ try {
 
 
     /***
-     *  confirm prerequisites
+     *  confirm materials
      * 
      * */
     let materialString =   (materials != "") 
                             ? '<p class="card-text materials"><strong>Materials: </strong>' + materials + '</p>'
                             : '<span class="visually-hidden hidden materials">No Prerequisites Provided</span>';
+
+
+
+
+    /***
+     *  confirm materials
+     * 
+     * */
+    let deadlineString =    (deadline != "") 
+                            ? '<p class="card-text deadline"><strong>Deadline: </strong>' + deadline + '</p>'
+                            : '<span class="visually-hidden hidden deadline">No Prerequisites Provided</span>';
 
 
 
@@ -152,11 +163,14 @@ try {
     document.write(subtitle);
     document.write(prerequisiteString);
     document.write(materialString);
+    document.write(deadlineString);
 
 
-    document.write(jurisdictionString);
+
 
     document.write(descriptionString);
+    document.write(jurisdictionString);
+
     document.write(closeCardBody);
     document.write(openHiddenFields);
     document.write(closeHiddenFields);
