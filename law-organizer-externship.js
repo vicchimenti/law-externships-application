@@ -10,7 +10,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 6.29.5
+ *      @version 6.29.6
  */
 
 
@@ -45,7 +45,7 @@ try {
      * */
     var titleLink = '<h3 class="card-title visually-hidden hidden">No Title Provided</h3>';
     var subtitle = '<p class="card-text visually-hidden hidden subject location">No Subject or Location Provided</p>';
-    var openCardBody = '<div class="card-body mb-4 px-3">';
+    var openCardBody = '<div class="card-body">';
     var closeCardBody = '</div>';
     var openHiddenFields = '<div class="visually-hidden hidden">';
     var closeHiddenFields = '</div>';
