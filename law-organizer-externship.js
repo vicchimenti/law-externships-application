@@ -140,8 +140,8 @@ try {
      * 
      * */
     document.write(beginningHTML);
-    document.write(titleLink);
     document.write(openCardBody);
+    document.write(titleLink);
     document.write(subtitle);
     document.write(typeString);
     document.write(openHiddenFields);
