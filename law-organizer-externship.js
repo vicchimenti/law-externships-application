@@ -10,7 +10,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 6.29.4
+ *      @version 6.29.5
  */
 
 
@@ -45,7 +45,7 @@ try {
      * */
     var titleLink = '<h3 class="card-title visually-hidden hidden">No Title Provided</h3>';
     var subtitle = '<p class="card-text visually-hidden hidden subject location">No Subject or Location Provided</p>';
-    var openCardBody = '<div class=""card-body mb-4 px-3">';
+    var openCardBody = '<div class="card-body mb-4 px-3">';
     var closeCardBody = '</div>';
     var openHiddenFields = '<div class="visually-hidden hidden">';
     var closeHiddenFields = '</div>';
@@ -64,10 +64,10 @@ try {
      * 
      * */
     if (agency != "") {
-        titleLink = '<h3 class="card-title agency px-3"><a href="' + fullTextLink + '" class="card-link" target="_blank" title="View full ' + agency + ' profile">' + agency + '</a></h3>';
+        titleLink = '<h3 class="card-title agency"><a href="' + fullTextLink + '" class="card-link" target="_blank" title="View full ' + agency + ' profile">' + agency + '</a></h3>';
     } else {
         beginningHTML = '<article class="externshipWrapper col card border-0 my-2 shadow-sm visually-hidden hidden" id="externship' + contentId + '" aria-label="' + externshipName + '">';
-        titleLink = '<h3 class="card-title agency px-3 visually-hidden hidden">' + externshipName + '</h3>';
+        titleLink = '<h3 class="card-title agency visually-hidden hidden">' + externshipName + '</h3>';
     }
 
 
