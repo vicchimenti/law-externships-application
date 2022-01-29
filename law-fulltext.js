@@ -53,7 +53,7 @@ try {
     var typeString = '<span class="visually-hidden hidden externshipType">No Type Provided</span>';
     var hiddenRegion = '<span class="visually-hidden hidden region">No Region Provided</span>';
     var descriptionString = '<div class="visually-hidden hidden description">No Description Provided</div>';
-    var beginningHTML = '<article class="externshipFulltext standardContent col card border-0" id="externship' + contentId + '" aria-label="' + externshipName + '">';
+    var beginningHTML = '<article class="externshipFulltext standardContent col card border-0" id="externship' + contentId + '" aria-label="' + externshipName + '" data-autonumber="' + externshipId + '" >';
     var endingHTML = '</article>';
 
 
@@ -73,7 +73,7 @@ try {
     
     } else {
 
-        beginningHTML = '<article class="externshipWrapper col card border-0 my-2 shadow-sm visually-hidden hidden" id="externship' + contentId + '" aria-label="' + externshipName + '">';
+        beginningHTML = '<article class="externshipWrapper col card border-0 my-2 shadow-sm visually-hidden hidden" id="externship' + contentId + '" aria-label="' + externshipName + '" data-autonumber="' + externshipId + '">';
         titleLink = '<h2 class="card-title agency visually-hidden hidden">' + externshipName + '</h2>';
     }
 
