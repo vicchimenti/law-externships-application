@@ -7,8 +7,3 @@
 .externshipWrapper .card-title a {
     color: #003282;
 }
-
-/* *** tune padding in card body *** */
-.externshipWrapper .card-body {
-    padding: 0 0 1rem 0;
-}
