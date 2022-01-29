@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 8.5.8
+ *      @version 8.5.9
  */
 
 
@@ -116,6 +116,8 @@ try {
     if (description != "") {
         descriptionString = '<div class="externshipDescription"><h3>Externship Description</h3>' + description + '</div><h4>Program Details</h4>';
     }
+
+
 
 
     /***
