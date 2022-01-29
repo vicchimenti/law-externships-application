@@ -42,6 +42,7 @@ try {
     var hours = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Hours' output='normal' modifiers='striptags,htmlentities' />");
 
 
+    var previousExterns = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Previous Externs' output='normal' modifiers='striptags,htmlentities' />");
 
 
 
