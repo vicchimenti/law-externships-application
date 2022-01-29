@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 8.1
+ *      @version 8.2
  */
 
 
@@ -63,9 +63,16 @@ try {
      *  validate agency field and set fulltext link
      * 
      * */
-    if (agency != "") {
+    if (agency != "" && externalLink != "") {
+
         titleLink = '<h2 class="card-title agency"><a href="' + externalLink + '" class="card-link" target="_blank" title="View the ' + agency + ' website">' + agency + '</a></h2>';
+    
+    } else if (agency != "" && externalLink == "") {
+
+        titleLink = '<h2 class="card-title agency">' + agency + '</h2>';
+    
     } else {
+
         beginningHTML = '<article class="externshipWrapper col card border-0 my-2 shadow-sm visually-hidden hidden" id="externship' + contentId + '" aria-label="' + externshipName + '">';
         titleLink = '<h2 class="card-title agency visually-hidden hidden">' + externshipName + '</h2>';
     }
