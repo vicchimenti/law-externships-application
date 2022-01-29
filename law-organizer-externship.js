@@ -10,7 +10,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 6.29.6
+ *      @version 6.29.7
  */
 
 
@@ -96,7 +96,7 @@ try {
      * 
      * */
     if (externshipType != "") {
-        typeString = '<p class="card-text externshipType">' + externshipType + '</p>';
+        typeString = '<p class="card-text fst-italic externshipType">' + externshipType + '</p>';
     }
 
 
