@@ -111,7 +111,7 @@ try {
      * 
      * */
     if (jurisdiction != "") {
-        jurisdictionString = '<p class="card-text externshipType">' + jurisdiction + '</span>';
+        jurisdictionString = '<p class="card-text externshipType">' + jurisdiction + '</p>';
     }
 
 
@@ -156,10 +156,10 @@ try {
     document.write(typeString);
     document.write(jurisdictionString);
     document.write(descriptionString);
+    document.write(closeCardBody);
     document.write(openHiddenFields);
     document.write(hiddenRegion);
     document.write(closeHiddenFields);
-    document.write(closeCardBody);
     document.write(endingHTML);
 
 
