@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 8.5.3
+ *      @version 8.5.4
  */
 
 
@@ -129,6 +129,17 @@ try {
 
 
 
+    /***
+     *  confirm prerequisites
+     * 
+     * */
+    let materialString =   (materials != "") 
+                            ? '<p class="card-text materials"><strong>Materials: </strong>' + materials + '</p>'
+                            : '<span class="visually-hidden hidden materials">No Prerequisites Provided</span>';
+
+
+
+
 
     /***
      *  Write the document once
@@ -140,6 +151,8 @@ try {
     document.write(titleLink);
     document.write(subtitle);
     document.write(prerequisiteString);
+    document.write(materialString);
+
 
     document.write(jurisdictionString);
 
