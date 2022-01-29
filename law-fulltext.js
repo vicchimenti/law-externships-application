@@ -173,6 +173,17 @@ try {
 
 
 
+    /***
+     *  confirm hours
+     * 
+     * */
+    let hoursString =   (hours != "") 
+                        ? '<p class="card-text hours"><strong>Hours: </strong>' + hours + '</p>'
+                        : '<span class="visually-hidden hidden hours">No hours provided</span>';
+
+
+
+
 
 
     /***
@@ -195,6 +206,8 @@ try {
     document.write(descriptionString);
 
     document.write(supervisorString);
+    document.write(hoursString);
+
 
     document.write(jurisdictionString);
 
