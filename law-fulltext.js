@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 8.5.7
+ *      @version 8.5.8
  */
 
 
@@ -210,22 +210,12 @@ try {
     document.write(acceptingString);
     document.write(prerequisiteString);
     document.write(materialString);
-
-
-
-
     document.write(descriptionString);
-
     document.write(supervisorString);
     document.write(hoursString);
     document.write(previousExternsString);
-
-
     document.write(jurisdictionString);
-
     document.write(closeCardBody);
-    document.write(openHiddenFields);
-    document.write(closeHiddenFields);
     document.write(endingHTML);
 
 
