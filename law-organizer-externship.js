@@ -43,16 +43,16 @@ try {
      *  Declare/Assign local variables with base formatting
      * 
      * */
-    var titleLink = '<h3 class="card-title visually-hidden">No Title Provided</h3>';
-    var summary = '<p class="card-text visually-hidden subject location">No Subject or Location Provided</p>';
-    var openCardBody = '<div class="card-body px-3">';
+    var titleLink = '<h3 class="card-title visually-hidden hidden">No Title Provided</h3>';
+    var subtitle = '<p class="card-text visually-hidden hidden subject location">No Subject or Location Provided</p>';
+    var openCardBody = '<div class=""card-body mb-4 px-3">';
     var closeCardBody = '</div>';
-    var openHiddenFields = '<div class="visually-hidden">';
+    var openHiddenFields = '<div class="visually-hidden hidden">';
     var closeHiddenFields = '</div>';
-    var hiddenJurisdiction = '<span class="visually-hidden jurisdiction">No Jurisdiction Provided</span>';
-    var hiddenType = '<span class="visually-hidden externshipType">No Type Provided</span>';
-    var hiddenRegion = '<span class="visually-hidden region">No Region Provided</span>';
-    var hiddenDescription = '<div class="visually-hidden description">No Description Provided</div>';
+    var hiddenJurisdiction = '<span class="visually-hidden hidden jurisdiction">No Jurisdiction Provided</span>';
+    var typeString = '<span class="visually-hidden hidden externshipType">No Type Provided</span>';
+    var hiddenRegion = '<span class="visually-hidden hidden region">No Region Provided</span>';
+    var hiddenDescription = '<div class="visually-hidden hidden description">No Description Provided</div>';
     var beginningHTML = '<article class="externshipWrapper col card border-0 my-2 shadow-sm" id="externship' + contentId + '" aria-label="' + externshipName + '">';
     var endingHTML = '</article>';
 
@@ -66,8 +66,8 @@ try {
     if (agency != "") {
         titleLink = '<h3 class="card-title agency px-3"><a href="' + fullTextLink + '" class="card-link" target="_blank" title="View full ' + agency + ' profile">' + agency + '</a></h3>';
     } else {
-        beginningHTML = '<article class="externshipWrapper col card border-0 my-2 shadow-sm visually-hidden" id="externship' + contentId + '" aria-label="' + externshipName + '">';
-        titleLink = '<h3 class="card-title agency px-3 visually-hidden">' + externshipName + '</h3>';
+        beginningHTML = '<article class="externshipWrapper col card border-0 my-2 shadow-sm visually-hidden hidden" id="externship' + contentId + '" aria-label="' + externshipName + '">';
+        titleLink = '<h3 class="card-title agency px-3 visually-hidden hidden">' + externshipName + '</h3>';
     }
 
 
@@ -78,14 +78,14 @@ try {
      * 
      * */
     if (subject != "" && location != "") {
-        summary = '<p class="card-text subject location">' + subject + ' (' + location + ')</p>';
+        subtitle = '<p class="card-text subject location">' + subject + ' | ' + location + '</p>';
     } else if (subject == "" && location != "") {
-        summary = '<p class="card-text subject location">(' + location + ')</p>';
+        subtitle = '<p class="card-text subject location">' + location + '</p>';
     } else if (subject != "" && location == "") {
-        summary = '<p class="card-text subject location">' + subject + '</p>';
+        subtitle = '<p class="card-text subject location">' + subject + '</p>';
     } else {
-        // When summary p is visually hidden compenstate for bottom margin in the card body
-        openCardBody = '<div class="card-body mb-4 px-3">';
+        // When subtitle p is visually hidden compenstate for bottom margin in the card body
+        // openCardBody = '<div class="card-body mb-4 px-3">';
     }
 
 
@@ -107,7 +107,7 @@ try {
      * 
      * */
     if (externshipType != "") {
-        hiddenType = '<span class="visually-hidden externshipType">' + externshipType + '</span>';
+        typeString = '<p class="card-text externshipType">' + externshipType + '</p>';
     }
 
 
@@ -118,7 +118,7 @@ try {
      * 
      * */
     if (region != "") {
-        hiddenRegion = '<span class="visually-hidden region">' + region + '</span>';
+        hiddenRegion = '<span class="visually-hidden hidden region">' + region + '</span>';
     }
 
 
@@ -129,7 +129,7 @@ try {
      * 
      * */
     if (description != "") {
-        hiddenDescription = '<div class="visually-hidden description">' + description + '</div>';
+        hiddenDescription = '<div class="visually-hidden hidden description">' + description + '</div>';
     }
 
 
@@ -142,13 +142,13 @@ try {
     document.write(beginningHTML);
     document.write(titleLink);
     document.write(openCardBody);
-    document.write(summary);
+    document.write(subtitle);
+    document.write(typeString);
     document.write(openHiddenFields);
     document.write(hiddenJurisdiction);
-    document.write(hiddenType);
     document.write(hiddenRegion);
-    document.write(closeHiddenFields);
     document.write(hiddenDescription);
+    document.write(closeHiddenFields);
     document.write(closeCardBody);
     document.write(endingHTML);
 
