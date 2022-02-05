@@ -10,7 +10,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 6.39
+ *      @version 6.39.1
  *          
  */
 
@@ -68,20 +68,10 @@ try {
      *  validate agency field and set fulltext link
      * 
      * */
-    // if (activeStatus != "") {
-    //     statusString = '<span class="visually-hidden hidden status">' + activeStatus + '</span>';
-    // }
-
-
-
-
-
-    /***
-     *  validate agency field and set fulltext link
-     * 
-     * */
     if (agency != "" && activeStatus == 1) {
+
         titleLink = '<h3 class="card-title agency"><a href="' + fullTextLink + '" class="card-link" target="_blank" title="View full ' + agency + ' profile">' + agency + '</a></h3>';
+    
     } else {
         
         beginningHTML = '<article class="externshipWrapper col card border-0 my-2 shadow-sm visually-hidden hidden" id="externship' + contentId + '" aria-label="' + externshipName + '">';
@@ -101,9 +91,6 @@ try {
         subtitle = '<p class="card-text subject location">' + location + '</p>';
     } else if (subject != "" && location == "") {
         subtitle = '<p class="card-text subject location">' + subject + '</p>';
-    } else {
-        // When subtitle p is visually hidden compenstate for bottom margin in the card body
-        // openCardBody = '<div class="card-body mb-4 px-3">';
     }
 
 
