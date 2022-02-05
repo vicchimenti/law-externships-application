@@ -30,7 +30,7 @@ try {
     var jurisdiction = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Jurisdiction' output='normal' modifiers='striptags,htmlentities' />");
     var externshipType = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Type' output='normal' modifiers='striptags,htmlentities' />");
     var region = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Region' output='normal' modifiers='striptags,htmlentities' />");
-    var status = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Status' output='normal' modifiers='striptags,htmlentities' />");
+    var currentStatus = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Status' output='normal' modifiers='striptags,htmlentities' />");
     var description = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Externship Description' output='normal' modifiers='medialibrary,nav_sections,striptags' />");
     var fullTextLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Agency' output='fulltext' use-element='true' filename-element='Agency' modifiers='striptags,htmlentities' />");
     var lastModifiedDate = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='meta' meta='last_modified' format='EEEE, MMMM d, yyyy' />");
@@ -56,6 +56,17 @@ try {
     var hiddenDescription = '<div class="visually-hidden hidden description">No Description Provided</div>';
     var beginningHTML = '<article class="externshipWrapper col card border-0 my-2 shadow-sm" id="externship' + contentId + '" aria-label="' + externshipName + '">';
     var endingHTML = '</article>';
+
+
+
+
+    /***
+     *  validate agency field and set fulltext link
+     * 
+     * */
+    if (currentStatus == "0") {
+        beginningHTML = '<article class="externshipWrapper col card border-0 my-2 shadow-sm visually-hidden hidden" id="externship' + contentId + '" aria-label="' + externshipName + '">';
+    }
 
 
 
