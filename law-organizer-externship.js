@@ -10,7 +10,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 6.38
+ *      @version 6.39
  *          
  */
 
@@ -58,7 +58,7 @@ try {
     var hiddenDescription = '<div class="visually-hidden hidden description">No Description Provided</div>';
     var beginningHTML = '<article class="externshipWrapper col card border-0 my-2 shadow-sm" id="externship' + contentId + '" aria-label="' + externshipName + '">';
     var endingHTML = '</article>';
-    var statusString = '<span class="visually-hidden hidden status">No valid status entered</span>';
+    var statusString = (activeStatus != "") ? '<span class="visually-hidden hidden status">' + activeStatus + '</span>' : '<span class="visually-hidden hidden status">No valid status entered</span>';
     var countryString = (country != "") ? '<span class="visually-hidden hidden country">' + country + '</span>' : '<span class="visually-hidden hidden country">No valid country entered</span>';
 
 
@@ -68,13 +68,9 @@ try {
      *  validate agency field and set fulltext link
      * 
      * */
-    if (activeStatus != "") {
-        statusString = '<span class="visually-hidden hidden status">' + activeStatus + '</span>';
-
-        // if (activeStatus == 0) {
-        //     beginningHTML = '<article hidden class="externshipWrapper col card border-0 my-2 shadow-sm visually-hidden hidden" id="externship' + contentId + '" aria-label="' + externshipName + '" aria-hidden="true">';
-        // }
-    }
+    // if (activeStatus != "") {
+    //     statusString = '<span class="visually-hidden hidden status">' + activeStatus + '</span>';
+    // }
 
 
 
