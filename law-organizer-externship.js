@@ -10,7 +10,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 6.36
+ *      @version 6.37
  *          
  */
 
@@ -84,7 +84,7 @@ try {
      *  validate agency field and set fulltext link
      * 
      * */
-    if (agency != "") {
+    if (agency != "" && activeStatus == 1) {
         titleLink = '<h3 class="card-title agency"><a href="' + fullTextLink + '" class="card-link" target="_blank" title="View full ' + agency + ' profile">' + agency + '</a></h3>';
     } else {
         beginningHTML = '<article class="externshipWrapper col card border-0 my-2 shadow-sm visually-hidden hidden" id="externship' + contentId + '" aria-label="' + externshipName + '">';
