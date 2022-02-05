@@ -10,7 +10,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 6.31
+ *      @version 6.32
  *          
  */
 
@@ -65,7 +65,7 @@ try {
      *  validate agency field and set fulltext link
      * 
      * */
-    if (currentStatus == "0") {
+    if (currentStatus != "1") {
         beginningHTML = '<article class="externshipWrapper col card border-0 my-2 shadow-sm visually-hidden hidden" id="externship' + contentId + '" aria-label="' + externshipName + '">';
     }
 
