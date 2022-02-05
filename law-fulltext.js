@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 8.8.1
+ *      @version 8.8.2
  */
 
 
@@ -108,10 +108,6 @@ try {
 
 
 
-
-
-
-
     /***
      *  confirm jurisdiction
      * 
@@ -128,7 +124,7 @@ try {
      * 
      * */
     if (description != "") {
-        descriptionString = '<div class="externshipDescription"><h3>Externship Description</h3>' + description + '</div><h4>Program Details</h4>';
+        descriptionString = '<div class="externshipDescription"><h3>Externship Description</h3>' + description + '</div>';
     }
 
 
@@ -149,7 +145,7 @@ try {
      *  confirm materials
      * 
      * */
-    let materialString =   (materials != "") 
+    let materialString =    (materials != "") 
                             ? '<p class="card-text materials"><strong>Materials: </strong>' + materials + '</p>'
                             : '<span class="visually-hidden hidden materials">No materials provided</span>';
 
@@ -232,6 +228,17 @@ try {
 
 
     /***
+     *  confirm Detail h4 needs to print
+     * 
+     * */
+    let detailHeader = (previousExterns != "" || summerHours != "" || hours != "" || supervisor != "" || jurisdiction != "")
+                        ? '<h4>Program Details</h4>'
+                        : '<span class="programDetails visually-hidden hidden">No program details fields provided</span>';
+
+
+
+
+    /***
      *  Write the document once
      * 
      * */
@@ -245,6 +252,7 @@ try {
     document.write(prerequisiteString);
     document.write(materialString);
     document.write(descriptionString);
+    document.write(detailHeader);
     document.write(supervisorString);
     document.write(weeklyHours);
     document.write(previousExternsString);
