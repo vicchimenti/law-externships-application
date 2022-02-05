@@ -167,9 +167,7 @@ try {
     document.write(hiddenJurisdiction);
     document.write(hiddenRegion);
     document.write(hiddenDescription);
-    
     document.write(statusString);
-
     document.write(closeHiddenFields);
     document.write(closeCardBody);
     document.write(endingHTML);
