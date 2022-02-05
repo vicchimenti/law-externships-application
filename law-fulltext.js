@@ -254,9 +254,9 @@ try {
     document.write(descriptionString);
     document.write(detailHeader);
     document.write(supervisorString);
-    document.write(weeklyHours);
     document.write(previousExternsString);
     document.write(jurisdictionString);
+    document.write(weeklyHours);
     document.write(closeCardBody);
     document.write(endingHTML);
 
