@@ -183,17 +183,28 @@ try {
      * 
      * */
     let hoursString =   (hours != "") 
-                        ? '<p class="card-text hours"><strong>Hours: </strong>' + hours + '</p>'
+                        ? '<p class="card-text hours"><strong>Fall/Spring Hours: </strong>' + hours + '</p>'
                         : '<span class="visually-hidden hidden hours">No hours provided</span>';
 
 
     /***
-     *  confirm hours
+     *  confirm summer hours
      * 
      * */
     let summerHoursString =     (summerHours != "") 
-                                ? '<p class="card-text hours"><strong>Hours: </strong>' + summerHours + '</p>'
+                                ? '<p class="card-text hours"><strong>Summer Hours: </strong>' + summerHours + '</p>'
                                 : '<span class="visually-hidden hidden hours">No hours provided</span>';
+
+
+
+
+    /***
+     *  define hour line
+     * 
+     * */
+    let weeklyHours =   (summerHours != "" || hours != "")
+                        ? '<div class="weeklyHours col-12 p-0 m-0">' + hoursString + summerHoursString + '</div>'
+                        : '<div class="weeklyHours visually-hidden hidden">' + hoursString + summerHoursString + '</div>';
 
 
 
@@ -226,7 +237,7 @@ try {
     document.write(materialString);
     document.write(descriptionString);
     document.write(supervisorString);
-    document.write(hoursString);
+    document.write(weeklyHours);
     document.write(previousExternsString);
     document.write(jurisdictionString);
     document.write(closeCardBody);
