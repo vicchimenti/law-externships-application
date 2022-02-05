@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 8.8
+ *      @version 8.8.1
  */
 
 
@@ -52,7 +52,6 @@ try {
      * 
      * */
     var titleLink = '<h2 class="card-title visually-hidden hidden">No Title Provided</h2>';
-    var subtitle = '<p class="card-text visually-hidden hidden subject location">No Subject or Location Provided</p>';
     var openCardBody = '<div class="card-body">';
     var closeCardBody = '</div>';
     var openHiddenFields = '<div class="visually-hidden hidden">';
@@ -87,16 +86,36 @@ try {
 
 
     /***
-     *  confirm location and subject fields
+     *  confirm location, country and subject fields
      * 
      * */
-    if (subject != "" && location != "") {
-        subtitle = '<p class="card-text subject location">' + subject + ' | ' + location + '</p>';
-    } else if (subject == "" && location != "") {
-        subtitle = '<p class="card-text subject location">' + location + '</p>';
-    } else if (subject != "" && location == "") {
-        subtitle = '<p class="card-text subject location">' + subject + '</p>';
-    }
+    // if (subject != "" && location != "") {
+    //     subtitle = '<p class="card-text subject location">' + subject + ' | ' + location + '</p>';
+    // } else if (subject == "" && location != "") {
+    //     subtitle = '<p class="card-text subject location">' + location + '</p>';
+    // } else if (subject != "" && location == "") {
+    //     subtitle = '<p class="card-text subject location">' + subject + '</p>';
+    // }
+
+    var subtitle =  (subject != "" && location != "" && country != "")
+                    ? '<p class="card-text subject location country">' + subject + ' | ' + location + ' | ' + country + '</p>'
+                    : (subject != "" && location == "" && country == "")
+                    ? '<p class="card-text subject">' + subject + '</p>'
+                    : (subject == "" && location != "" && country == "")
+                    ? '<p class="card-text location">' + location + '</p>'
+                    : (subject == "" && location == "" && country != "")
+                    ? '<p class="card-text country">' + country + '</p>'
+                    : (subject == "" && location != "" && country != "")
+                    ? '<p class="card-text location country">' + location + ' | ' + country + '</p>'
+                    : (subject != "" && location == "" && country != "")
+                    ? '<p class="card-text subject country">' + subject + ' | ' + country + '</p>'
+                    : (subject != "" && location != "" && country == "")
+                    ? '<p class="card-text subject location">' + subject + ' | ' + location + '</p>'
+                    : '<p class="card-text visually-hidden hidden subject location country">No Subject, Location or Country Provided</p>';
+
+
+
+
 
 
 
