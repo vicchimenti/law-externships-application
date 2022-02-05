@@ -10,7 +10,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 6.37
+ *      @version 6.38
  *          
  */
 
@@ -71,9 +71,9 @@ try {
     if (activeStatus != "") {
         statusString = '<span class="visually-hidden hidden status">' + activeStatus + '</span>';
 
-        if (activeStatus == 0) {
-            beginningHTML = '<article class="externshipWrapper col card border-0 my-2 shadow-sm visually-hidden hidden" id="externship' + contentId + '" aria-label="' + externshipName + '">';
-        }
+        // if (activeStatus == 0) {
+        //     beginningHTML = '<article hidden class="externshipWrapper col card border-0 my-2 shadow-sm visually-hidden hidden" id="externship' + contentId + '" aria-label="' + externshipName + '" aria-hidden="true">';
+        // }
     }
 
 
@@ -87,6 +87,7 @@ try {
     if (agency != "" && activeStatus == 1) {
         titleLink = '<h3 class="card-title agency"><a href="' + fullTextLink + '" class="card-link" target="_blank" title="View full ' + agency + ' profile">' + agency + '</a></h3>';
     } else {
+        
         beginningHTML = '<article class="externshipWrapper col card border-0 my-2 shadow-sm visually-hidden hidden" id="externship' + contentId + '" aria-label="' + externshipName + '">';
         titleLink = '<h3 class="card-title agency visually-hidden hidden">' + externshipName + '</h3>';
     }
