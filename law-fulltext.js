@@ -187,6 +187,15 @@ try {
                         : '<span class="visually-hidden hidden hours">No hours provided</span>';
 
 
+    /***
+     *  confirm hours
+     * 
+     * */
+    let summerHoursString =     (summerHours != "") 
+                                ? '<p class="card-text hours"><strong>Hours: </strong>' + summerHours + '</p>'
+                                : '<span class="visually-hidden hidden hours">No hours provided</span>';
+
+
 
 
     /***
