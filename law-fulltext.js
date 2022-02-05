@@ -89,14 +89,6 @@ try {
      *  confirm location, country and subject fields
      * 
      * */
-    // if (subject != "" && location != "") {
-    //     subtitle = '<p class="card-text subject location">' + subject + ' | ' + location + '</p>';
-    // } else if (subject == "" && location != "") {
-    //     subtitle = '<p class="card-text subject location">' + location + '</p>';
-    // } else if (subject != "" && location == "") {
-    //     subtitle = '<p class="card-text subject location">' + subject + '</p>';
-    // }
-
     var subtitle =  (subject != "" && location != "" && country != "")
                     ? '<p class="card-text subject location country">' + subject + ' | ' + location + ' | ' + country + '</p>'
                     : (subject != "" && location == "" && country == "")
