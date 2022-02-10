@@ -116,7 +116,7 @@ try {
      * 
      * */
     let locationCityString =    (locationCity != "" && locationState != ""  && locationZip != "")
-                                ? '<p class="card-text city state zip">' + locationAddress + '</p>'
+                                ? '<p class="card-text city state zip">' + locationCity + ', ' + locationState + ' ' + locationZip + '</p>'
                                 : '<span class="city state zip visually-hidden hidden">No city, state or zip provided</span>';
 
 
