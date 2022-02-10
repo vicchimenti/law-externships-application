@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 8.8.3
+ *      @version 8.9
  */
 
 
@@ -56,14 +56,11 @@ try {
      * 
      * */
     var titleLink = '<h2 class="card-title visually-hidden hidden">No Title Provided</h2>';
-    var openAddress = '<address class="visually-hidden hidden">';
     var closeAddress = '</address>'
     var openCardBody = '<div class="card-body">';
     var closeCardBody = '</div>';
     var openHiddenFields = '<div class="visually-hidden hidden">';
     var closeHiddenFields = '</div>';
-    var jurisdictionString = '<span class="visually-hidden hidden jurisdiction">No Jurisdiction Provided</span>';
-    var descriptionString = '<div class="visually-hidden hidden description">No Description Provided</div>';
     var beginningHTML = '<article class="externshipFulltext standardContent col card border-0" id="externship' + contentId + '" aria-label="' + externshipName + '" data-autonumber="' + externshipId + '" >';
     var endingHTML = '</article>';
 
@@ -118,9 +115,9 @@ try {
      *  confirm city state and zip
      * 
      * */
-    if (locationCity != "" && locationState != ""  && locationZip != "") {
-        locationAddressString = '<p class="card-text locationAddress">' + locationAddress + '</p>';
-    }
+    let locationCityString =    (locationCity != "" && locationState != ""  && locationZip != "")
+                                ? '<p class="card-text city state zip">' + locationAddress + '</p>'
+                                : '<span class="city state zip visually-hidden hidden">No city, state or zip provided</span>';
 
 
 
@@ -129,9 +126,20 @@ try {
      *  confirm address
      * 
      * */
-    if (locationAddress != "") {
-        locationAddressString = '<sp class="card-text locationAddress">' + locationAddress + '</p>';
-    }
+    let locationAddressString = (locationAddress != "") 
+                                ? '<p class="card-text locationAddress">' + locationAddress + '</p>'
+                                : '<span class="locationAddress visually-hidden hidden">No address provided</span>';
+
+
+
+
+    /***
+     *  confirm address field is visible
+     * 
+     * */
+    let openAddress =   (locationAddress != "") 
+                        ? '<address class="card-text">'
+                        : '<address class="visually-hidden hidden">';
 
 
 
@@ -140,9 +148,9 @@ try {
      *  confirm jurisdiction
      * 
      * */
-    if (jurisdiction != "") {
-        jurisdictionString = '<p class="card-text externshipType"><strong>Jurisdiction: </strong>' + jurisdiction + '</p>';
-    }
+    let jurisdictionString =    (jurisdiction != "")
+                                ? '<p class="card-text externshipType"><strong>Jurisdiction: </strong>' + jurisdiction + '</p>'
+                                : '<span class="visually-hidden hidden jurisdiction">No Jurisdiction Provided</span>';
 
 
 
@@ -151,9 +159,9 @@ try {
      *  confirm description
      * 
      * */
-    if (description != "") {
-        descriptionString = '<div class="externshipDescription"><h3>Externship Description</h3>' + description + '</div>';
-    }
+    let descriptionString = (description != "")
+                            ? '<div class="externshipDescription"><h3>Externship Description</h3>' + description + '</div>'
+                            : '<div class="visually-hidden hidden description">No Description Provided</div>';
 
 
 
@@ -277,8 +285,7 @@ try {
     document.write(subtitle);
     document.write(openAddress);
     document.write(locationAddressString);
-
-    
+    document.write(locationCityString);
     document.write(closeAddress);
     document.write(deadlineString);
     document.write(acceptingString);
