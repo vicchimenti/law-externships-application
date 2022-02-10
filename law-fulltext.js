@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 8.9.1
+ *      @version 8.9.2
  */
 
 
@@ -116,7 +116,7 @@ try {
      * 
      * */
     let locationCityString =    (locationCity != "" && locationState != ""  && locationZip != "")
-                                ? '<p class="card-text city state zip">' + locationCity + ', ' + locationState + ' ' + locationZip + '</p>'
+                                ? '<span class="card-text city state zip">' + locationCity + ', ' + locationState + ' ' + locationZip + '</span><br>'
                                 : '<span class="city state zip visually-hidden hidden">No city, state or zip provided</span>';
 
 
@@ -127,7 +127,7 @@ try {
      * 
      * */
     let locationAddressString = (locationAddress != "") 
-                                ? '<p class="card-text locationAddress">' + locationAddress + '</p>'
+                                ? '<span class="card-text locationAddress">' + locationAddress + '</span><br>'
                                 : '<span class="locationAddress visually-hidden hidden">No address provided</span>';
 
 
