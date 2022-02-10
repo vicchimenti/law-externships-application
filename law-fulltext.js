@@ -115,6 +115,28 @@ try {
 
 
     /***
+     *  confirm city state and zip
+     * 
+     * */
+    if (locationCity != "" && locationState != ""  && locationZip != "") {
+        locationAddressString = '<p class="card-text locationAddress">' + locationAddress + '</p>';
+    }
+
+
+
+
+    /***
+     *  confirm address
+     * 
+     * */
+    if (locationAddress != "") {
+        locationAddressString = '<sp class="card-text locationAddress">' + locationAddress + '</p>';
+    }
+
+
+
+
+    /***
      *  confirm jurisdiction
      * 
      * */
@@ -253,6 +275,11 @@ try {
     document.write(openCardBody);
     document.write(titleLink);
     document.write(subtitle);
+    document.write(openAddress);
+    document.write(locationAddressString);
+
+    
+    document.write(closeAddress);
     document.write(deadlineString);
     document.write(acceptingString);
     document.write(prerequisiteString);
