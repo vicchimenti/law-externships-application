@@ -14,9 +14,9 @@ SELECT
     MY_XML.tblAgencies.query('de').value('.', 'NVARCHAR(max)'),
     MY_XML.tblAgencies.query('ma').value('.', 'NVARCHAR(256)'),
     MY_XML.tblAgencies.query('hr').value('.', 'NVARCHAR(128)'),
+    MY_XML.tblAgencies.query('pr').value('.', 'NVARCHAR(256)'),
+    MY_XML.tblAgencies.query('ju').value('.', 'NVARCHAR(256)'),
 
-	hs NVARCHAR (128),
-	pr NVARCHAR (256),
 	ju NVARCHAR (256),
 	ty NVARCHAR (256),
 	re NVARCHAR (128),
