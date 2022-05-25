@@ -10,8 +10,8 @@ SELECT
     MY_XML.tblAgencies.query('ac').value('.', 'NVARCHAR(128)'),
     MY_XML.tblAgencies.query('lo').value('.', 'NVARCHAR(256)'),
     MY_XML.tblAgencies.query('sp').value('.', 'NVARCHAR(256)'),
+    MY_XML.tblAgencies.query('sv').value('.', 'NVARCHAR(256)'),
 
-	sv NVARCHAR (256),
 	de NVARCHAR (max),
 	ma NVARCHAR (256),
 	hr NVARCHAR (128),
