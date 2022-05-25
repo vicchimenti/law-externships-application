@@ -17,9 +17,8 @@ SELECT
     MY_XML.tblAgencies.query('pr').value('.', 'NVARCHAR(256)'),
     MY_XML.tblAgencies.query('ju').value('.', 'NVARCHAR(256)'),
     MY_XML.tblAgencies.query('ty').value('.', 'NVARCHAR(256)'),
+    MY_XML.tblAgencies.query('re').value('.', 'NVARCHAR(128)'),
 
-	ty NVARCHAR (256),
-	re NVARCHAR (128),
 	pe NVARCHAR (max),
 
 FROM (SELECT CAST(MY_XML AS xml)
