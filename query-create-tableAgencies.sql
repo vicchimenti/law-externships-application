@@ -1,0 +1,27 @@
+CREATE TABLE tblAgencies
+(
+    AgencyId INT IDENTITY PRIMARY KEY,
+	an INT NOT NULL,
+	ag NVARCHAR (max) NOT NULL,
+	ad NVARCHAR (256),
+	ci NVARCHAR (128),
+	st NVARCHAR (128),
+	co NVARCHAR (128),
+	zi NVARCHAR (20),
+	ur NVARCHAR (256),
+	ac NVARCHAR (128),
+	lo NVARCHAR (256),
+	sp NVARCHAR (256),
+	sv NVARCHAR (256),
+	de NVARCHAR (max),
+	ma NVARCHAR (256),
+	hr NVARCHAR (128),
+	hs NVARCHAR (128),
+	pr NVARCHAR (256),
+	ju NVARCHAR (256),
+	ty NVARCHAR (256),
+	re NVARCHAR (128),
+	pe NVARCHAR (max),
+	ss INT NOT NULL,
+	ShortDescription NVARCHAR (256)
+)
