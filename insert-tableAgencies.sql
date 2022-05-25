@@ -4,7 +4,9 @@ SELECT
     MY_XML.tblAgencies.query('ag').value('.', 'NVARCHAR(max)'),
     MY_XML.tblAgencies.query('ad').value('.', 'NVARCHAR(256)'),
     MY_XML.tblAgencies.query('ci').value('.', 'NVARCHAR(128)'),
-    MY_XML.tblAgencies.query('ci').value('.', 'NVARCHAR(128)'),
+    MY_XML.tblAgencies.query('st').value('.', 'NVARCHAR(128)'),
+    MY_XML.tblAgencies.query('co').value('.', 'NVARCHAR(128)'),
+
     MY_XML.tblAgencies.query('zi').value('.', 'NVARCHAR(20)'),
     MY_XML.tblAgencies.query('ur').value('.', 'NVARCHAR(256)'),
     MY_XML.tblAgencies.query('ac').value('.', 'NVARCHAR(128)'),
