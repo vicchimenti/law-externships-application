@@ -20,7 +20,6 @@ SELECT
     MY_XML.tblAgencies.query('re').value('.', 'NVARCHAR(128)'),
     MY_XML.tblAgencies.query('pe').value('.', 'NVARCHAR(max)'),
     MY_XML.tblAgencies.query('ss').value('.', 'INT')
-
 FROM (SELECT CAST(MY_XML AS xml)
         FROM OPENROWSET(BULK 'C:\Users\Victo\OneDrive - Seattle University\Marcom\Law\Externships\XML Folder\20220520\lawExternshipsActive.xml', SINGLE_BLOB) AS T(MY_XML)) AS T(MY_XML)
         CROSS APPLY MY_XML.nodes('dataroot/tblAgencies') AS MY_XML (tblAgencies);
