@@ -1,4 +1,4 @@
-INSERT INTO tblAgencies (DOCUMENT, NAME, ADDRESS, PROFESSION)
+INSERT INTO tblAgencies (an, ag, ad, ci, st, co, zi, ur, ac, lo, sp, sv, de, ma, hr, hs, pr, ju, ty, re, pe, ss)
 SELECT
    MY_XML.Customer.query('Document').value('.', 'VARCHAR(20)'),
    MY_XML.Customer.query('Name').value('.', 'VARCHAR(50)'),
