@@ -6,7 +6,6 @@ SELECT
     MY_XML.tblAgencies.query('ci').value('.', 'NVARCHAR(128)'),
     MY_XML.tblAgencies.query('st').value('.', 'NVARCHAR(128)'),
     MY_XML.tblAgencies.query('co').value('.', 'NVARCHAR(128)'),
-
     MY_XML.tblAgencies.query('zi').value('.', 'NVARCHAR(20)'),
     MY_XML.tblAgencies.query('ur').value('.', 'NVARCHAR(256)'),
     MY_XML.tblAgencies.query('ac').value('.', 'NVARCHAR(128)'),
@@ -16,6 +15,8 @@ SELECT
     MY_XML.tblAgencies.query('de').value('.', 'NVARCHAR(max)'),
     MY_XML.tblAgencies.query('ma').value('.', 'NVARCHAR(256)'),
     MY_XML.tblAgencies.query('hr').value('.', 'NVARCHAR(128)'),
+    MY_XML.tblAgencies.query('hs').value('.', 'NVARCHAR(128)'),
+
     MY_XML.tblAgencies.query('pr').value('.', 'NVARCHAR(256)'),
     MY_XML.tblAgencies.query('ju').value('.', 'NVARCHAR(256)'),
     MY_XML.tblAgencies.query('ty').value('.', 'NVARCHAR(256)'),
