@@ -12,6 +12,7 @@ SELECT
     MY_XML.tblAgencies.query('sp').value('.', 'NVARCHAR(256)'),
     MY_XML.tblAgencies.query('sv').value('.', 'NVARCHAR(256)'),
     MY_XML.tblAgencies.query('de').value('.', 'NVARCHAR(max)'),
+    MY_XML.tblAgencies.query('ma').value('.', 'NVARCHAR(256)'),
 
 	ma NVARCHAR (256),
 	hr NVARCHAR (128),
