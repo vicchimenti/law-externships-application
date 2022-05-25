@@ -1,4 +1,4 @@
-INSERT INTO tableAgencies (DOCUMENT, NAME, ADDRESS, PROFESSION)
+INSERT INTO tblAgencies (DOCUMENT, NAME, ADDRESS, PROFESSION)
 SELECT
    MY_XML.Customer.query('Document').value('.', 'VARCHAR(20)'),
    MY_XML.Customer.query('Name').value('.', 'VARCHAR(50)'),
