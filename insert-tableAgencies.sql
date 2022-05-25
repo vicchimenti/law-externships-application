@@ -23,6 +23,6 @@ SELECT
     MY_XML.tblAgencies.query('pe').value('.', 'NVARCHAR(max)'),
     MY_XML.tblAgencies.query('ss').value('.', 'INT')
 FROM (SELECT CAST(MY_XML AS xml)
-        FROM OPENROWSET(BULK 'C:\temp\lawExternshipsActive.xml', SINGLE_BLOB) AS T(MY_XML)) AS T(MY_XML)
+        FROM OPENROWSET(BULK 'https://redhawks-my.sharepoint.com/personal/chimenti_seattleu_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fchimenti%5Fseattleu%5Fedu%2FDocuments%2FMarcom%2FLaw%2FExternships%2FXML%20Folder%2F20220520/lawExternshipsActive.xml', SINGLE_BLOB) AS T(MY_XML)) AS T(MY_XML)
         CROSS APPLY MY_XML.nodes('dataroot/tblAgencies') AS MY_XML (tblAgencies);
       
