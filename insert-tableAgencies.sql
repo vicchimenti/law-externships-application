@@ -16,7 +16,6 @@ SELECT
     MY_XML.tblAgencies.query('ma').value('.', 'NVARCHAR(256)'),
     MY_XML.tblAgencies.query('hr').value('.', 'NVARCHAR(128)'),
     MY_XML.tblAgencies.query('hs').value('.', 'NVARCHAR(128)'),
-
     MY_XML.tblAgencies.query('pr').value('.', 'NVARCHAR(256)'),
     MY_XML.tblAgencies.query('ju').value('.', 'NVARCHAR(256)'),
     MY_XML.tblAgencies.query('ty').value('.', 'NVARCHAR(256)'),
