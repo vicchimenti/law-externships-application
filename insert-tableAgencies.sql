@@ -6,5 +6,5 @@ SELECT
    MY_XML.Customer.query('Profession').value('.', 'VARCHAR(50)')
 FROM (SELECT CAST(MY_XML AS xml)
       FROM OPENROWSET(BULK 'C:\Users\Victo\OneDrive - Seattle University\Marcom\Law\Externships\XML Folder\20220520\lawExternshipsActive.xml', SINGLE_BLOB) AS T(MY_XML)) AS T(MY_XML)
-      CROSS APPLY MY_XML.nodes('dataroot/tblAgencies') AS MY_XML (Customer);
+      CROSS APPLY MY_XML.nodes('dataroot/tblAgencies') AS MY_XML (tblAgencies);
       
