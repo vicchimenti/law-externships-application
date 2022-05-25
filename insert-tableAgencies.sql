@@ -23,6 +23,6 @@ SELECT
     MY_XML.tblAgencies.query('pe').value('.', 'NVARCHAR(max)'),
     MY_XML.tblAgencies.query('ss').value('.', 'INT')
 FROM (SELECT CAST(MY_XML AS xml)
-        FROM OPENROWSET(BULK 'C:\Users\Victo\OneDrive\Documents\SQL Server Management Studio\Law Externships\lawExternshipsActive.xml', SINGLE_BLOB) AS T(MY_XML)) AS T(MY_XML)
+        FROM OPENROWSET(BULK 'H:\Victo\Documents\Marcom\XMLs\lawExternshipsActive.xml', SINGLE_BLOB) AS T(MY_XML)) AS T(MY_XML)
         CROSS APPLY MY_XML.nodes('dataroot/tblAgencies') AS MY_XML (tblAgencies);
       
