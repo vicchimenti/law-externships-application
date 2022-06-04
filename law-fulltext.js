@@ -71,11 +71,11 @@ try {
      *  validate agency field and set fulltext link
      * 
      * */
-    if (agency != "" && externalLink != "") {
+    if (agency != "" && externalLink != "" && externalLink.includes("https://")) {
 
         titleLink = '<h2 class="card-title agency"><a href="' + externalLink + '" class="card-link" target="_blank" title="View the ' + agency + ' website">' + agency + '</a></h2>';
     
-    } else if (agency != "" && externalLink == "") {
+    } else if (agency != "") {
 
         titleLink = '<h2 class="card-title agency">' + agency + '</h2>';
     
