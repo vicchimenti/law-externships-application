@@ -59,7 +59,7 @@
       * */
      let directoryDict = {
  
-         positionTitle: getContentValues('<t4 type="content" name="Title" output="normal" modifiers="striptags,htmlentities" />'),
+         activeStatus: getContentValues('<t4 type="content" name="Active Status" output="normal" modifiers="striptags,htmlentities" />'),
          department: getContentValues('<t4 type="content" name="Department" output="normal" modifiers="striptags,htmlentities" />')
  
      };
