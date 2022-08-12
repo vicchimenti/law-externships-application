@@ -1,7 +1,7 @@
 /***
  *  law/organizer/externship
  * 
- *  switcher file to parse out inactive items
+ *  switcher file to parse out inactive or invalid items
  */
 
 
@@ -20,7 +20,7 @@
   * 
   */
  let contentTypeLayout = 'output/externship'; //edit this to change the Content Layout to use for output
- let optionToTestFor = "1"; //edit this to change the option
+ let activeState = "1"; //edit this to change the option
  
  
  
@@ -68,23 +68,17 @@
  
  
      /***
-      *  Parse department and titles for null
+      *  parse status field
       * */
-     let departmentString = (directoryDict.department.content) ?
-         directoryDict.department.content :
-         "undefined";
- 
-     let titleString = (directoryDict.positionTitle.content) ?
-         directoryDict.positionTitle.content :
-         "undefined";
+     let statusState = xmlExternDict.activeStatus.content || "0";
  
  
  
  
      /***
-      *  Validate School of Law
+      *  Validate each externship
       * */
-     if (departmentString.includes(optionToTestFor) || titleString.includes(optionToTestFor)) {
+     if (xmlExternDict.agency.content && statusState == activeState) {
  
          var sw = new java.io.StringWriter();
          var t4w = new com.terminalfour.utils.T4StreamWriter(sw);
