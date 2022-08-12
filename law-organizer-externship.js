@@ -57,7 +57,7 @@
      /***
       *      Dictionary of content
       * */
-     let directoryDict = {
+     let xmlExternDict = {
  
          activeStatus: getContentValues('<t4 type="content" name="Active Status" output="normal" modifiers="striptags,htmlentities" />'),
          department: getContentValues('<t4 type="content" name="Department" output="normal" modifiers="striptags,htmlentities" />')
