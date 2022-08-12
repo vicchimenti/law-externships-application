@@ -60,7 +60,7 @@
      let xmlExternDict = {
  
          activeStatus: getContentValues('<t4 type="content" name="Active Status" output="normal" modifiers="striptags,htmlentities" />'),
-         department: getContentValues('<t4 type="content" name="Department" output="normal" modifiers="striptags,htmlentities" />')
+         agency: getContentValues('<t4 type="content" name="Agency" output="normal" modifiers="striptags,htmlentities" />')
  
      };
  
