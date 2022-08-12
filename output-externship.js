@@ -87,7 +87,7 @@ try {
         description: getContentValues('<t4 type="content" name="Externship Description" output="normal" modifiers="medialibrary,nav_sections,striptags" />'),
         fullTextLink: getContentValues('<t4 type="content" name="Agency" output="fulltext" use-element="true" filename-element="Agency" modifiers="striptags,htmlentities" />'),
         lastModifiedDate: getContentValues('<t4 type="meta" meta="last_modified" format="EEEE, MMMM d, yyyy" />'),
-        publishDate = getContentValues('<t4 type="meta" meta="publish_date" format="EEEE, MMMM d, yyyy" />'),
+        publishDate: getContentValues('<t4 type="meta" meta="publish_date" format="EEEE, MMMM d, yyyy" />'),
         contentId: getContentValues('<t4 type="meta" meta="content_id" />')
 
     };
