@@ -19,8 +19,8 @@
   *  declare and assign topic layout
   * 
   */
- let contentTypeLayout = 'output/career'; //edit this to change the Content Layout to use for output
- let optionToTestFor = "School of Law"; //edit this to change the option
+ let contentTypeLayout = 'output/externship'; //edit this to change the Content Layout to use for output
+ let optionToTestFor = "1"; //edit this to change the option
  
  
  
