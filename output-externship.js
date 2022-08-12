@@ -1,8 +1,8 @@
 /***
  *      @author Victor Chimenti, MSCS
- *      @file law-organizer-externship.js
+ *      @file output-externship.js
  *      @see Seattle University School of Law Externship Database
- *      law/organizer/externship
+ *      output/externship
  *      ID: 5304
  *
  *      This content layout will be sorted by the organizer and will link to the
